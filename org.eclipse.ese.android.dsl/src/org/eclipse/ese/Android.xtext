@@ -1,0 +1,28 @@
+grammar org.eclipse.ese.Android with org.eclipse.xtext.common.Terminals 
+
+import "platform:/resource/org.eclipse.ese.android.model/src/android.ecore" 
+
+Project returns Project:
+	'Project'name=ID 
+		activities+=Activity+;
+
+Activity returns Activity:
+	'Activity' name=ID '{'
+		widgets+=Widget* '}';
+		
+
+Widget returns Widget:
+	Text | Button | Spinner | Link;
+
+Text returns Text:
+	'Text' name=ID;
+
+Button returns Button:
+	'Button' name=ID;
+
+Spinner returns Spinner:
+	'Spinner' name=ID;
+
+Link returns Link:
+	'Link' name=ID '->' activity=[Activity];
+    
