@@ -37,6 +37,7 @@ public class AndroidParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getEntryAccess().getAlternatives(), "rule__Entry__Alternatives");
 					put(grammarAccess.getWidgetAccess().getAlternatives(), "rule__Widget__Alternatives");
 					put(grammarAccess.getProjectAccess().getGroup(), "rule__Project__Group__0");
 					put(grammarAccess.getActivityAccess().getGroup(), "rule__Activity__Group__0");
@@ -63,7 +64,7 @@ public class AndroidParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			org.eclipse.ese.ui.contentassist.antlr.internal.InternalAndroidParser typedParser = (org.eclipse.ese.ui.contentassist.antlr.internal.InternalAndroidParser) parser;
-			typedParser.entryRuleProject();
+			typedParser.entryRuleEntry();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

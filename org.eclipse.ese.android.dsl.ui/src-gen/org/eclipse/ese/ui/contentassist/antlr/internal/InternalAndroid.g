@@ -57,6 +57,34 @@ import org.eclipse.ese.services.AndroidGrammarAccess;
 
 
 
+// Entry rule entryRuleEntry
+entryRuleEntry 
+:
+{ before(grammarAccess.getEntryRule()); }
+	 ruleEntry
+{ after(grammarAccess.getEntryRule()); } 
+	 EOF 
+;
+
+// Rule Entry
+ruleEntry
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getEntryAccess().getAlternatives()); }
+(rule__Entry__Alternatives)
+{ after(grammarAccess.getEntryAccess().getAlternatives()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleProject
 entryRuleProject 
 :
@@ -253,6 +281,28 @@ finally {
 
 
 
+
+rule__Entry__Alternatives
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getEntryAccess().getProjectParserRuleCall_0()); }
+	ruleProject
+{ after(grammarAccess.getEntryAccess().getProjectParserRuleCall_0()); }
+)
+
+    |(
+{ before(grammarAccess.getEntryAccess().getActivityParserRuleCall_1()); }
+	ruleActivity
+{ after(grammarAccess.getEntryAccess().getActivityParserRuleCall_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 rule__Widget__Alternatives
     @init {

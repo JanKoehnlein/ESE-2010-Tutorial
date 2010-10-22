@@ -54,7 +54,7 @@ import org.eclipse.ese.services.AndroidGrammarAccess;
     
     @Override
     protected String getFirstRuleName() {
-    	return "Project";	
+    	return "Entry";	
    	}
    	
    	@Override
@@ -69,6 +69,48 @@ import org.eclipse.ese.services.AndroidGrammarAccess;
         appendSkippedTokens();
     } 
 }
+
+
+
+
+// Entry rule entryRuleEntry
+entryRuleEntry returns [EObject current=null] 
+	:
+	{ currentNode = createCompositeNode(grammarAccess.getEntryRule(), currentNode); }
+	 iv_ruleEntry=ruleEntry 
+	 { $current=$iv_ruleEntry.current; } 
+	 EOF 
+;
+
+// Rule Entry
+ruleEntry returns [EObject current=null] 
+    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+    }
+    @after { resetLookahead(); 
+    	lastConsumedNode = currentNode;
+    }:
+(
+    { 
+        currentNode=createCompositeNode(grammarAccess.getEntryAccess().getProjectParserRuleCall_0(), currentNode); 
+    }
+    this_Project_0=ruleProject
+    { 
+        $current = $this_Project_0.current; 
+        currentNode = currentNode.getParent();
+    }
+
+    |
+    { 
+        currentNode=createCompositeNode(grammarAccess.getEntryAccess().getActivityParserRuleCall_1(), currentNode); 
+    }
+    this_Activity_1=ruleActivity
+    { 
+        $current = $this_Activity_1.current; 
+        currentNode = currentNode.getParent();
+    }
+)
+;
+
 
 
 

@@ -42,7 +42,7 @@ public class AndroidParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrP
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Project";
+		return "Entry";
 	}
 	
 	public AndroidGrammarAccess getGrammarAccess() {

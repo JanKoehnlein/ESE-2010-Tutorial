@@ -31,18 +31,133 @@ protected class ThisRootNode extends RootToken {
 	@Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Project_Group(this, this, 0, inst);
-			case 1: return new Activity_Group(this, this, 1, inst);
-			case 2: return new Widget_Alternatives(this, this, 2, inst);
-			case 3: return new Text_Group(this, this, 3, inst);
-			case 4: return new Button_Group(this, this, 4, inst);
-			case 5: return new Spinner_Group(this, this, 5, inst);
-			case 6: return new Link_Group(this, this, 6, inst);
+			case 0: return new Entry_Alternatives(this, this, 0, inst);
+			case 1: return new Project_Group(this, this, 1, inst);
+			case 2: return new Activity_Group(this, this, 2, inst);
+			case 3: return new Widget_Alternatives(this, this, 3, inst);
+			case 4: return new Text_Group(this, this, 4, inst);
+			case 5: return new Button_Group(this, this, 5, inst);
+			case 6: return new Spinner_Group(this, this, 6, inst);
+			case 7: return new Link_Group(this, this, 7, inst);
 			default: return null;
 		}	
 	}	
 }
 	
+
+/************ begin Rule Entry ****************
+ *
+ * Entry returns ecore::EObject:
+ * 	Project | Activity;
+ *
+ **/
+
+// Project | Activity
+protected class Entry_Alternatives extends AlternativesToken {
+
+	public Entry_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Alternatives getGrammarElement() {
+		return grammarAccess.getEntryAccess().getAlternatives();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Entry_ProjectParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Entry_ActivityParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getActivityRule().getType().getClassifier() && 
+		   getEObject().eClass() != grammarAccess.getProjectRule().getType().getClassifier())
+			return null;
+		return eObjectConsumer;
+	}
+
+}
+
+// Project
+protected class Entry_ProjectParserRuleCall_0 extends RuleCallToken {
+	
+	public Entry_ProjectParserRuleCall_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public RuleCall getGrammarElement() {
+		return grammarAccess.getEntryAccess().getProjectParserRuleCall_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Project_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getProjectRule().getType().getClassifier())
+			return null;
+		if(checkForRecursion(Project_Group.class, eObjectConsumer)) return null;
+		return eObjectConsumer;
+	}
+	
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index, inst);
+		}	
+	}	
+}
+
+// Activity
+protected class Entry_ActivityParserRuleCall_1 extends RuleCallToken {
+	
+	public Entry_ActivityParserRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public RuleCall getGrammarElement() {
+		return grammarAccess.getEntryAccess().getActivityParserRuleCall_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Activity_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getActivityRule().getType().getClassifier())
+			return null;
+		if(checkForRecursion(Activity_Group.class, eObjectConsumer)) return null;
+		return eObjectConsumer;
+	}
+	
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index, inst);
+		}	
+	}	
+}
+
+
+/************ end Rule Entry ****************/
+
 
 /************ begin Rule Project ****************
  *

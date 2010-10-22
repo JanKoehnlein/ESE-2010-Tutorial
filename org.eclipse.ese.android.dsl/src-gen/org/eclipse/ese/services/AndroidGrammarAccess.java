@@ -17,6 +17,26 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
+	public class EntryElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Entry");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cProjectParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cActivityParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Entry returns ecore::EObject:
+		//	Project | Activity;
+		public ParserRule getRule() { return rule; }
+
+		//Project | Activity
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Project
+		public RuleCall getProjectParserRuleCall_0() { return cProjectParserRuleCall_0; }
+
+		//Activity
+		public RuleCall getActivityParserRuleCall_1() { return cActivityParserRuleCall_1; }
+	}
+
 	public class ProjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Project");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -230,6 +250,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
+	private EntryElements pEntry;
 	private ProjectElements pProject;
 	private ActivityElements pActivity;
 	private WidgetElements pWidget;
@@ -259,6 +280,16 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
+	//Entry returns ecore::EObject:
+	//	Project | Activity;
+	public EntryElements getEntryAccess() {
+		return (pEntry != null) ? pEntry : (pEntry = new EntryElements());
+	}
+	
+	public ParserRule getEntryRule() {
+		return getEntryAccess().getRule();
+	}
+
 	//Project:
 	//	"Project" name=ID activities+=Activity+;
 	public ProjectElements getProjectAccess() {
