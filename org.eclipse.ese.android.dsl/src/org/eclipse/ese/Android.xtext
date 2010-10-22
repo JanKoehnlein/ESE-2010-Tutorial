@@ -18,14 +18,16 @@ Widget:
 	Text | Button | Spinner | Link;
 
 Text:
-	'Text' name=ID;
+	'Text' name=IdOrString;
 
 Button:
-	'Button' name=ID;
+	'Button' name=IdOrString;
 
 Spinner:
-	'Spinner' name=ID;
+	'Spinner' name=IdOrString;
 
 Link:
-	'Link' name=ID '->' activity=[Activity];
+	'Link' name=IdOrString '->' activity=[Activity];
     
+IdOrString:
+	ID | STRING;

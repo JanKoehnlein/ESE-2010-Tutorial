@@ -39,6 +39,7 @@ public class AndroidParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getEntryAccess().getAlternatives(), "rule__Entry__Alternatives");
 					put(grammarAccess.getWidgetAccess().getAlternatives(), "rule__Widget__Alternatives");
+					put(grammarAccess.getIdOrStringAccess().getAlternatives(), "rule__IdOrString__Alternatives");
 					put(grammarAccess.getProjectAccess().getGroup(), "rule__Project__Group__0");
 					put(grammarAccess.getActivityAccess().getGroup(), "rule__Activity__Group__0");
 					put(grammarAccess.getTextAccess().getGroup(), "rule__Text__Group__0");

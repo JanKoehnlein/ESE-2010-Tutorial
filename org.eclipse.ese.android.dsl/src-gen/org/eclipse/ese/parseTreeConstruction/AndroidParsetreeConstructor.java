@@ -681,11 +681,11 @@ protected class Widget_LinkParserRuleCall_3 extends RuleCallToken {
 /************ begin Rule Text ****************
  *
  * Text:
- * 	"Text" name=ID;
+ * 	"Text" name=IdOrString;
  *
  **/
 
-// "Text" name=ID
+// "Text" name=IdOrString
 protected class Text_Group extends GroupToken {
 	
 	public Text_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -735,7 +735,7 @@ protected class Text_TextKeyword_0 extends KeywordToken  {
 
 }
 
-// name=ID
+// name=IdOrString
 protected class Text_NameAssignment_1 extends AssignmentToken  {
 	
 	public Text_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -759,9 +759,9 @@ protected class Text_NameAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getTextAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getTextAccess().getNameIDTerminalRuleCall_1_0();
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getTextAccess().getNameIdOrStringParserRuleCall_1_0(), value, null)) {
+			type = AssignmentType.DATATYPE_RULE_CALL;
+			element = grammarAccess.getTextAccess().getNameIdOrStringParserRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -776,11 +776,11 @@ protected class Text_NameAssignment_1 extends AssignmentToken  {
 /************ begin Rule Button ****************
  *
  * Button:
- * 	"Button" name=ID;
+ * 	"Button" name=IdOrString;
  *
  **/
 
-// "Button" name=ID
+// "Button" name=IdOrString
 protected class Button_Group extends GroupToken {
 	
 	public Button_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -830,7 +830,7 @@ protected class Button_ButtonKeyword_0 extends KeywordToken  {
 
 }
 
-// name=ID
+// name=IdOrString
 protected class Button_NameAssignment_1 extends AssignmentToken  {
 	
 	public Button_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -854,9 +854,9 @@ protected class Button_NameAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getButtonAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getButtonAccess().getNameIDTerminalRuleCall_1_0();
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getButtonAccess().getNameIdOrStringParserRuleCall_1_0(), value, null)) {
+			type = AssignmentType.DATATYPE_RULE_CALL;
+			element = grammarAccess.getButtonAccess().getNameIdOrStringParserRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -871,11 +871,11 @@ protected class Button_NameAssignment_1 extends AssignmentToken  {
 /************ begin Rule Spinner ****************
  *
  * Spinner:
- * 	"Spinner" name=ID;
+ * 	"Spinner" name=IdOrString;
  *
  **/
 
-// "Spinner" name=ID
+// "Spinner" name=IdOrString
 protected class Spinner_Group extends GroupToken {
 	
 	public Spinner_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -925,7 +925,7 @@ protected class Spinner_SpinnerKeyword_0 extends KeywordToken  {
 
 }
 
-// name=ID
+// name=IdOrString
 protected class Spinner_NameAssignment_1 extends AssignmentToken  {
 	
 	public Spinner_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -949,9 +949,9 @@ protected class Spinner_NameAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getSpinnerAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getSpinnerAccess().getNameIDTerminalRuleCall_1_0();
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getSpinnerAccess().getNameIdOrStringParserRuleCall_1_0(), value, null)) {
+			type = AssignmentType.DATATYPE_RULE_CALL;
+			element = grammarAccess.getSpinnerAccess().getNameIdOrStringParserRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -966,11 +966,11 @@ protected class Spinner_NameAssignment_1 extends AssignmentToken  {
 /************ begin Rule Link ****************
  *
  * Link:
- * 	"Link" name=ID "->" activity=[Activity];
+ * 	"Link" name=IdOrString "->" activity=[Activity];
  *
  **/
 
-// "Link" name=ID "->" activity=[Activity]
+// "Link" name=IdOrString "->" activity=[Activity]
 protected class Link_Group extends GroupToken {
 	
 	public Link_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1020,7 +1020,7 @@ protected class Link_LinkKeyword_0 extends KeywordToken  {
 
 }
 
-// name=ID
+// name=IdOrString
 protected class Link_NameAssignment_1 extends AssignmentToken  {
 	
 	public Link_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1044,9 +1044,9 @@ protected class Link_NameAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getLinkAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getLinkAccess().getNameIDTerminalRuleCall_1_0();
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getLinkAccess().getNameIdOrStringParserRuleCall_1_0(), value, null)) {
+			type = AssignmentType.DATATYPE_RULE_CALL;
+			element = grammarAccess.getLinkAccess().getNameIdOrStringParserRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -1115,5 +1115,6 @@ protected class Link_ActivityAssignment_3 extends AssignmentToken  {
 
 
 /************ end Rule Link ****************/
+
 
 }

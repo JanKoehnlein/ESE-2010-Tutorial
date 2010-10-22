@@ -24,12 +24,12 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalAndroidParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Project'", "'Activity'", "'{'", "'}'", "'Text'", "'Button'", "'Spinner'", "'Link'", "'->'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Project'", "'Activity'", "'{'", "'}'", "'Text'", "'Button'", "'Spinner'", "'Link'", "'->'"
     };
     public static final int RULE_ID=4;
-    public static final int RULE_STRING=6;
+    public static final int RULE_STRING=5;
     public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_INT=5;
+    public static final int RULE_INT=6;
     public static final int RULE_WS=9;
     public static final int RULE_SL_COMMENT=8;
     public static final int EOF=-1;
@@ -753,51 +753,55 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleText
-    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:348:1: ruleText returns [EObject current=null] : ( 'Text' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:348:1: ruleText returns [EObject current=null] : ( 'Text' ( (lv_name_1_0= ruleIdOrString ) ) ) ;
     public final EObject ruleText() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_1_0=null;
+        AntlrDatatypeRuleToken lv_name_1_0 = null;
+
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:353:6: ( ( 'Text' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:354:1: ( 'Text' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:353:6: ( ( 'Text' ( (lv_name_1_0= ruleIdOrString ) ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:354:1: ( 'Text' ( (lv_name_1_0= ruleIdOrString ) ) )
             {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:354:1: ( 'Text' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:354:3: 'Text' ( (lv_name_1_0= RULE_ID ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:354:1: ( 'Text' ( (lv_name_1_0= ruleIdOrString ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:354:3: 'Text' ( (lv_name_1_0= ruleIdOrString ) )
             {
             match(input,15,FollowSets000.FOLLOW_15_in_ruleText682); 
 
                     createLeafNode(grammarAccess.getTextAccess().getTextKeyword_0(), null); 
                 
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:358:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:359:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:358:1: ( (lv_name_1_0= ruleIdOrString ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:359:1: (lv_name_1_0= ruleIdOrString )
             {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:359:1: (lv_name_1_0= RULE_ID )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:360:3: lv_name_1_0= RULE_ID
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:359:1: (lv_name_1_0= ruleIdOrString )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:360:3: lv_name_1_0= ruleIdOrString
             {
-            lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleText699); 
+             
+            	        currentNode=createCompositeNode(grammarAccess.getTextAccess().getNameIdOrStringParserRuleCall_1_0(), currentNode); 
+            	    
+            pushFollow(FollowSets000.FOLLOW_ruleIdOrString_in_ruleText703);
+            lv_name_1_0=ruleIdOrString();
+            _fsp--;
 
-            			createLeafNode(grammarAccess.getTextAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
-            		
 
             	        if (current==null) {
             	            current = factory.create(grammarAccess.getTextRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            associateNodeWithAstElement(currentNode.getParent(), current);
             	        }
             	        try {
             	       		set(
             	       			current, 
             	       			"name",
             	        		lv_name_1_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
+            	        		"IdOrString", 
+            	        		currentNode);
             	        } catch (ValueConverterException vce) {
             				handleValueConverterException(vce);
             	        }
+            	        currentNode = currentNode.getParent();
             	    
 
             }
@@ -840,12 +844,12 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
             // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:392:2: iv_ruleButton= ruleButton EOF
             {
              currentNode = createCompositeNode(grammarAccess.getButtonRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleButton_in_entryRuleButton740);
+            pushFollow(FollowSets000.FOLLOW_ruleButton_in_entryRuleButton739);
             iv_ruleButton=ruleButton();
             _fsp--;
 
              current =iv_ruleButton; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleButton750); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleButton749); 
 
             }
 
@@ -863,51 +867,55 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleButton
-    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:399:1: ruleButton returns [EObject current=null] : ( 'Button' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:399:1: ruleButton returns [EObject current=null] : ( 'Button' ( (lv_name_1_0= ruleIdOrString ) ) ) ;
     public final EObject ruleButton() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_1_0=null;
+        AntlrDatatypeRuleToken lv_name_1_0 = null;
+
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:404:6: ( ( 'Button' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:405:1: ( 'Button' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:404:6: ( ( 'Button' ( (lv_name_1_0= ruleIdOrString ) ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:405:1: ( 'Button' ( (lv_name_1_0= ruleIdOrString ) ) )
             {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:405:1: ( 'Button' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:405:3: 'Button' ( (lv_name_1_0= RULE_ID ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:405:1: ( 'Button' ( (lv_name_1_0= ruleIdOrString ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:405:3: 'Button' ( (lv_name_1_0= ruleIdOrString ) )
             {
-            match(input,16,FollowSets000.FOLLOW_16_in_ruleButton785); 
+            match(input,16,FollowSets000.FOLLOW_16_in_ruleButton784); 
 
                     createLeafNode(grammarAccess.getButtonAccess().getButtonKeyword_0(), null); 
                 
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:409:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:410:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:409:1: ( (lv_name_1_0= ruleIdOrString ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:410:1: (lv_name_1_0= ruleIdOrString )
             {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:410:1: (lv_name_1_0= RULE_ID )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:411:3: lv_name_1_0= RULE_ID
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:410:1: (lv_name_1_0= ruleIdOrString )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:411:3: lv_name_1_0= ruleIdOrString
             {
-            lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleButton802); 
+             
+            	        currentNode=createCompositeNode(grammarAccess.getButtonAccess().getNameIdOrStringParserRuleCall_1_0(), currentNode); 
+            	    
+            pushFollow(FollowSets000.FOLLOW_ruleIdOrString_in_ruleButton805);
+            lv_name_1_0=ruleIdOrString();
+            _fsp--;
 
-            			createLeafNode(grammarAccess.getButtonAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
-            		
 
             	        if (current==null) {
             	            current = factory.create(grammarAccess.getButtonRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            associateNodeWithAstElement(currentNode.getParent(), current);
             	        }
             	        try {
             	       		set(
             	       			current, 
             	       			"name",
             	        		lv_name_1_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
+            	        		"IdOrString", 
+            	        		currentNode);
             	        } catch (ValueConverterException vce) {
             				handleValueConverterException(vce);
             	        }
+            	        currentNode = currentNode.getParent();
             	    
 
             }
@@ -950,12 +958,12 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
             // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:443:2: iv_ruleSpinner= ruleSpinner EOF
             {
              currentNode = createCompositeNode(grammarAccess.getSpinnerRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleSpinner_in_entryRuleSpinner843);
+            pushFollow(FollowSets000.FOLLOW_ruleSpinner_in_entryRuleSpinner841);
             iv_ruleSpinner=ruleSpinner();
             _fsp--;
 
              current =iv_ruleSpinner; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSpinner853); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSpinner851); 
 
             }
 
@@ -973,51 +981,55 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleSpinner
-    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:450:1: ruleSpinner returns [EObject current=null] : ( 'Spinner' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:450:1: ruleSpinner returns [EObject current=null] : ( 'Spinner' ( (lv_name_1_0= ruleIdOrString ) ) ) ;
     public final EObject ruleSpinner() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_1_0=null;
+        AntlrDatatypeRuleToken lv_name_1_0 = null;
+
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:455:6: ( ( 'Spinner' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:456:1: ( 'Spinner' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:455:6: ( ( 'Spinner' ( (lv_name_1_0= ruleIdOrString ) ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:456:1: ( 'Spinner' ( (lv_name_1_0= ruleIdOrString ) ) )
             {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:456:1: ( 'Spinner' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:456:3: 'Spinner' ( (lv_name_1_0= RULE_ID ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:456:1: ( 'Spinner' ( (lv_name_1_0= ruleIdOrString ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:456:3: 'Spinner' ( (lv_name_1_0= ruleIdOrString ) )
             {
-            match(input,17,FollowSets000.FOLLOW_17_in_ruleSpinner888); 
+            match(input,17,FollowSets000.FOLLOW_17_in_ruleSpinner886); 
 
                     createLeafNode(grammarAccess.getSpinnerAccess().getSpinnerKeyword_0(), null); 
                 
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:460:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:461:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:460:1: ( (lv_name_1_0= ruleIdOrString ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:461:1: (lv_name_1_0= ruleIdOrString )
             {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:461:1: (lv_name_1_0= RULE_ID )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:462:3: lv_name_1_0= RULE_ID
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:461:1: (lv_name_1_0= ruleIdOrString )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:462:3: lv_name_1_0= ruleIdOrString
             {
-            lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleSpinner905); 
+             
+            	        currentNode=createCompositeNode(grammarAccess.getSpinnerAccess().getNameIdOrStringParserRuleCall_1_0(), currentNode); 
+            	    
+            pushFollow(FollowSets000.FOLLOW_ruleIdOrString_in_ruleSpinner907);
+            lv_name_1_0=ruleIdOrString();
+            _fsp--;
 
-            			createLeafNode(grammarAccess.getSpinnerAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
-            		
 
             	        if (current==null) {
             	            current = factory.create(grammarAccess.getSpinnerRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            associateNodeWithAstElement(currentNode.getParent(), current);
             	        }
             	        try {
             	       		set(
             	       			current, 
             	       			"name",
             	        		lv_name_1_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
+            	        		"IdOrString", 
+            	        		currentNode);
             	        } catch (ValueConverterException vce) {
             				handleValueConverterException(vce);
             	        }
+            	        currentNode = currentNode.getParent();
             	    
 
             }
@@ -1060,12 +1072,12 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
             // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:494:2: iv_ruleLink= ruleLink EOF
             {
              currentNode = createCompositeNode(grammarAccess.getLinkRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleLink_in_entryRuleLink946);
+            pushFollow(FollowSets000.FOLLOW_ruleLink_in_entryRuleLink943);
             iv_ruleLink=ruleLink();
             _fsp--;
 
              current =iv_ruleLink; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleLink956); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleLink953); 
 
             }
 
@@ -1083,51 +1095,55 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleLink
-    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:501:1: ruleLink returns [EObject current=null] : ( 'Link' ( (lv_name_1_0= RULE_ID ) ) '->' ( ( RULE_ID ) ) ) ;
+    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:501:1: ruleLink returns [EObject current=null] : ( 'Link' ( (lv_name_1_0= ruleIdOrString ) ) '->' ( ( RULE_ID ) ) ) ;
     public final EObject ruleLink() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_1_0=null;
+        AntlrDatatypeRuleToken lv_name_1_0 = null;
+
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:506:6: ( ( 'Link' ( (lv_name_1_0= RULE_ID ) ) '->' ( ( RULE_ID ) ) ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:507:1: ( 'Link' ( (lv_name_1_0= RULE_ID ) ) '->' ( ( RULE_ID ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:506:6: ( ( 'Link' ( (lv_name_1_0= ruleIdOrString ) ) '->' ( ( RULE_ID ) ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:507:1: ( 'Link' ( (lv_name_1_0= ruleIdOrString ) ) '->' ( ( RULE_ID ) ) )
             {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:507:1: ( 'Link' ( (lv_name_1_0= RULE_ID ) ) '->' ( ( RULE_ID ) ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:507:3: 'Link' ( (lv_name_1_0= RULE_ID ) ) '->' ( ( RULE_ID ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:507:1: ( 'Link' ( (lv_name_1_0= ruleIdOrString ) ) '->' ( ( RULE_ID ) ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:507:3: 'Link' ( (lv_name_1_0= ruleIdOrString ) ) '->' ( ( RULE_ID ) )
             {
-            match(input,18,FollowSets000.FOLLOW_18_in_ruleLink991); 
+            match(input,18,FollowSets000.FOLLOW_18_in_ruleLink988); 
 
                     createLeafNode(grammarAccess.getLinkAccess().getLinkKeyword_0(), null); 
                 
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:511:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:512:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:511:1: ( (lv_name_1_0= ruleIdOrString ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:512:1: (lv_name_1_0= ruleIdOrString )
             {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:512:1: (lv_name_1_0= RULE_ID )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:513:3: lv_name_1_0= RULE_ID
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:512:1: (lv_name_1_0= ruleIdOrString )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:513:3: lv_name_1_0= ruleIdOrString
             {
-            lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleLink1008); 
+             
+            	        currentNode=createCompositeNode(grammarAccess.getLinkAccess().getNameIdOrStringParserRuleCall_1_0(), currentNode); 
+            	    
+            pushFollow(FollowSets000.FOLLOW_ruleIdOrString_in_ruleLink1009);
+            lv_name_1_0=ruleIdOrString();
+            _fsp--;
 
-            			createLeafNode(grammarAccess.getLinkAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
-            		
 
             	        if (current==null) {
             	            current = factory.create(grammarAccess.getLinkRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            associateNodeWithAstElement(currentNode.getParent(), current);
             	        }
             	        try {
             	       		set(
             	       			current, 
             	       			"name",
             	        		lv_name_1_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
+            	        		"IdOrString", 
+            	        		currentNode);
             	        } catch (ValueConverterException vce) {
             				handleValueConverterException(vce);
             	        }
+            	        currentNode = currentNode.getParent();
             	    
 
             }
@@ -1135,7 +1151,7 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,19,FollowSets000.FOLLOW_19_in_ruleLink1023); 
+            match(input,19,FollowSets000.FOLLOW_19_in_ruleLink1019); 
 
                     createLeafNode(grammarAccess.getLinkAccess().getHyphenMinusGreaterThanSignKeyword_2(), null); 
                 
@@ -1151,7 +1167,7 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleLink1041); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleLink1037); 
 
             		createLeafNode(grammarAccess.getLinkAccess().getActivityActivityCrossReference_3_0(), "activity"); 
             	
@@ -1183,6 +1199,122 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
     // $ANTLR end ruleLink
 
 
+    // $ANTLR start entryRuleIdOrString
+    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:561:1: entryRuleIdOrString returns [String current=null] : iv_ruleIdOrString= ruleIdOrString EOF ;
+    public final String entryRuleIdOrString() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleIdOrString = null;
+
+
+        try {
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:562:2: (iv_ruleIdOrString= ruleIdOrString EOF )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:563:2: iv_ruleIdOrString= ruleIdOrString EOF
+            {
+             currentNode = createCompositeNode(grammarAccess.getIdOrStringRule(), currentNode); 
+            pushFollow(FollowSets000.FOLLOW_ruleIdOrString_in_entryRuleIdOrString1074);
+            iv_ruleIdOrString=ruleIdOrString();
+            _fsp--;
+
+             current =iv_ruleIdOrString.getText(); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleIdOrString1085); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end entryRuleIdOrString
+
+
+    // $ANTLR start ruleIdOrString
+    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:570:1: ruleIdOrString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING ) ;
+    public final AntlrDatatypeRuleToken ruleIdOrString() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token this_ID_0=null;
+        Token this_STRING_1=null;
+
+         setCurrentLookahead(); resetLookahead(); 
+            
+        try {
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:575:6: ( (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:576:1: (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING )
+            {
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:576:1: (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==RULE_ID) ) {
+                alt5=1;
+            }
+            else if ( (LA5_0==RULE_STRING) ) {
+                alt5=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("576:1: (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING )", 5, 0, input);
+
+                throw nvae;
+            }
+            switch (alt5) {
+                case 1 :
+                    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:576:6: this_ID_0= RULE_ID
+                    {
+                    this_ID_0=(Token)input.LT(1);
+                    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleIdOrString1125); 
+
+                    		current.merge(this_ID_0);
+                        
+                     
+                        createLeafNode(grammarAccess.getIdOrStringAccess().getIDTerminalRuleCall_0(), null); 
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:584:10: this_STRING_1= RULE_STRING
+                    {
+                    this_STRING_1=(Token)input.LT(1);
+                    match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleIdOrString1151); 
+
+                    		current.merge(this_STRING_1);
+                        
+                     
+                        createLeafNode(grammarAccess.getIdOrStringAccess().getSTRINGTerminalRuleCall_1(), null); 
+                        
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+             resetLookahead(); 
+            	    lastConsumedNode = currentNode;
+                
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end ruleIdOrString
+
+
  
 
     
@@ -1211,22 +1343,26 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_ruleLink_in_ruleWidget602 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleText_in_entryRuleText637 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleText647 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_ruleText682 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleText699 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleButton_in_entryRuleButton740 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleButton750 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_ruleButton785 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleButton802 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSpinner_in_entryRuleSpinner843 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleSpinner853 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_ruleSpinner888 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleSpinner905 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLink_in_entryRuleLink946 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleLink956 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_ruleLink991 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleLink1008 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_19_in_ruleLink1023 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleLink1041 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_15_in_ruleText682 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleIdOrString_in_ruleText703 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleButton_in_entryRuleButton739 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleButton749 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_ruleButton784 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleIdOrString_in_ruleButton805 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSpinner_in_entryRuleSpinner841 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleSpinner851 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_17_in_ruleSpinner886 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleIdOrString_in_ruleSpinner907 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLink_in_entryRuleLink943 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleLink953 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_ruleLink988 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleIdOrString_in_ruleLink1009 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_19_in_ruleLink1019 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleLink1037 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleIdOrString_in_entryRuleIdOrString1074 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleIdOrString1085 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleIdOrString1125 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleIdOrString1151 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

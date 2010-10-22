@@ -142,23 +142,23 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTextKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameIdOrStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
 		//Text:
-		//	"Text" name=ID;
+		//	"Text" name=IdOrString;
 		public ParserRule getRule() { return rule; }
 
-		//"Text" name=ID
+		//"Text" name=IdOrString
 		public Group getGroup() { return cGroup; }
 
 		//"Text"
 		public Keyword getTextKeyword_0() { return cTextKeyword_0; }
 
-		//name=ID
+		//name=IdOrString
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//IdOrString
+		public RuleCall getNameIdOrStringParserRuleCall_1_0() { return cNameIdOrStringParserRuleCall_1_0; }
 	}
 
 	public class ButtonElements extends AbstractParserRuleElementFinder {
@@ -166,23 +166,23 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cButtonKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameIdOrStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
 		//Button:
-		//	"Button" name=ID;
+		//	"Button" name=IdOrString;
 		public ParserRule getRule() { return rule; }
 
-		//"Button" name=ID
+		//"Button" name=IdOrString
 		public Group getGroup() { return cGroup; }
 
 		//"Button"
 		public Keyword getButtonKeyword_0() { return cButtonKeyword_0; }
 
-		//name=ID
+		//name=IdOrString
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//IdOrString
+		public RuleCall getNameIdOrStringParserRuleCall_1_0() { return cNameIdOrStringParserRuleCall_1_0; }
 	}
 
 	public class SpinnerElements extends AbstractParserRuleElementFinder {
@@ -190,23 +190,23 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSpinnerKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameIdOrStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
 		//Spinner:
-		//	"Spinner" name=ID;
+		//	"Spinner" name=IdOrString;
 		public ParserRule getRule() { return rule; }
 
-		//"Spinner" name=ID
+		//"Spinner" name=IdOrString
 		public Group getGroup() { return cGroup; }
 
 		//"Spinner"
 		public Keyword getSpinnerKeyword_0() { return cSpinnerKeyword_0; }
 
-		//name=ID
+		//name=IdOrString
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//IdOrString
+		public RuleCall getNameIdOrStringParserRuleCall_1_0() { return cNameIdOrStringParserRuleCall_1_0; }
 	}
 
 	public class LinkElements extends AbstractParserRuleElementFinder {
@@ -214,27 +214,27 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLinkKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameIdOrStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cHyphenMinusGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cActivityAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final CrossReference cActivityActivityCrossReference_3_0 = (CrossReference)cActivityAssignment_3.eContents().get(0);
 		private final RuleCall cActivityActivityIDTerminalRuleCall_3_0_1 = (RuleCall)cActivityActivityCrossReference_3_0.eContents().get(1);
 		
 		//Link:
-		//	"Link" name=ID "->" activity=[Activity];
+		//	"Link" name=IdOrString "->" activity=[Activity];
 		public ParserRule getRule() { return rule; }
 
-		//"Link" name=ID "->" activity=[Activity]
+		//"Link" name=IdOrString "->" activity=[Activity]
 		public Group getGroup() { return cGroup; }
 
 		//"Link"
 		public Keyword getLinkKeyword_0() { return cLinkKeyword_0; }
 
-		//name=ID
+		//name=IdOrString
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//IdOrString
+		public RuleCall getNameIdOrStringParserRuleCall_1_0() { return cNameIdOrStringParserRuleCall_1_0; }
 
 		//"->"
 		public Keyword getHyphenMinusGreaterThanSignKeyword_2() { return cHyphenMinusGreaterThanSignKeyword_2; }
@@ -248,6 +248,26 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getActivityActivityIDTerminalRuleCall_3_0_1() { return cActivityActivityIDTerminalRuleCall_3_0_1; }
 	}
+
+	public class IdOrStringElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IdOrString");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//IdOrString returns ecore::EString:
+		//	ID | STRING;
+		public ParserRule getRule() { return rule; }
+
+		//ID | STRING
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+	}
 	
 	
 	private EntryElements pEntry;
@@ -258,6 +278,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	private ButtonElements pButton;
 	private SpinnerElements pSpinner;
 	private LinkElements pLink;
+	private IdOrStringElements pIdOrString;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -321,7 +342,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Text:
-	//	"Text" name=ID;
+	//	"Text" name=IdOrString;
 	public TextElements getTextAccess() {
 		return (pText != null) ? pText : (pText = new TextElements());
 	}
@@ -331,7 +352,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Button:
-	//	"Button" name=ID;
+	//	"Button" name=IdOrString;
 	public ButtonElements getButtonAccess() {
 		return (pButton != null) ? pButton : (pButton = new ButtonElements());
 	}
@@ -341,7 +362,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Spinner:
-	//	"Spinner" name=ID;
+	//	"Spinner" name=IdOrString;
 	public SpinnerElements getSpinnerAccess() {
 		return (pSpinner != null) ? pSpinner : (pSpinner = new SpinnerElements());
 	}
@@ -351,13 +372,23 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Link:
-	//	"Link" name=ID "->" activity=[Activity];
+	//	"Link" name=IdOrString "->" activity=[Activity];
 	public LinkElements getLinkAccess() {
 		return (pLink != null) ? pLink : (pLink = new LinkElements());
 	}
 	
 	public ParserRule getLinkRule() {
 		return getLinkAccess().getRule();
+	}
+
+	//IdOrString returns ecore::EString:
+	//	ID | STRING;
+	public IdOrStringElements getIdOrStringAccess() {
+		return (pIdOrString != null) ? pIdOrString : (pIdOrString = new IdOrStringElements());
+	}
+	
+	public ParserRule getIdOrStringRule() {
+		return getIdOrStringAccess().getRule();
 	}
 
 	//terminal ID:
