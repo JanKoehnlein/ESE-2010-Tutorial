@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates>
+	<template autoinsert="true" context="org.eclipse.ese.Android.Activity" deleted="false" description="Create an Activity" enabled="true" name="Activity" id="org.eclipse.ese.android.ActivityTemplate">Activity ${name} {
+	${cursor}
+}</template>
+	<template autoinsert="true" context="org.eclipse.ese.Android.Button"
+		deleted="false" description="Create a Button widget" enabled="true"
+		name="Button  " id="org.eclipse.ese.android.ButtonTemplate">
+		Button ${name}
+	</template>
+	<template autoinsert="true" context="org.eclipse.ese.Android.Link"
+		deleted="false" description="Create a Link widget" enabled="true"
+		name="Link     " id="org.eclipse.ese.android.LinkTemplate">
+		Link ${name} -&gt; ${activity:CrossReference(Link.activity)}
+	</template>
+	<template autoinsert="true"
+		context="org.eclipse.ese.Android.Project" deleted="false"
+		description="Create an initial Project with one Activity"
+		enabled="true" name="Project" id="org.eclipse.ese.android.ProjectTemplate">
+		Project ${ProjectName}
+
+		Activity ${ActivityName} { ${cursor} }
+	</template>
+	<template autoinsert="true"
+		context="org.eclipse.ese.Android.Spinner" deleted="false"
+		description="Create a Spinner widget" enabled="true" name="Spinner"
+		id="org.eclipse.ese.android.SpinnerTemplate">
+		Spinner ${name}
+	</template>
+	<template autoinsert="true" context="org.eclipse.ese.Android.Text"
+		deleted="false" description="Create a Text widget" enabled="true"
+		name="Text     " id="org.eclipse.ese.android.TextTemplate">
+		Text ${name}
+	</template></templates>
