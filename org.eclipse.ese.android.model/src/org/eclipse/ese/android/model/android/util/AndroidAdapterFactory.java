@@ -72,8 +72,8 @@ public class AndroidAdapterFactory extends AdapterFactoryImpl {
 	protected AndroidSwitch<Adapter> modelSwitch =
 		new AndroidSwitch<Adapter>() {
 			@Override
-			public Adapter caseProject(Project object) {
-				return createProjectAdapter();
+			public Adapter caseApplication(Application object) {
+				return createApplicationAdapter();
 			}
 			@Override
 			public Adapter caseActivity(Activity object) {
@@ -120,16 +120,16 @@ public class AndroidAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.ese.android.model.android.Project <em>Project</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ese.android.model.android.Application <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.ese.android.model.android.Project
+	 * @see org.eclipse.ese.android.model.android.Application
 	 * @generated
 	 */
-	public Adapter createProjectAdapter() {
+	public Adapter createApplicationAdapter() {
 		return null;
 	}
 

@@ -7,7 +7,7 @@ This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator
 
 Package android <http://www.eclipse.org/acceleo/example/android>
 
-  Class Project
+  Class Application
     Attribute name : EString<<1..1>>
     Reference activities : Activity<<0..*>>
 

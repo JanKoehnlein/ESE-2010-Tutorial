@@ -60,7 +60,7 @@ public class AndroidFactoryImpl extends EFactoryImpl implements AndroidFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case AndroidPackage.PROJECT: return createProject();
+			case AndroidPackage.APPLICATION: return createApplication();
 			case AndroidPackage.ACTIVITY: return createActivity();
 			case AndroidPackage.TEXT: return createText();
 			case AndroidPackage.BUTTON: return createButton();
@@ -76,9 +76,9 @@ public class AndroidFactoryImpl extends EFactoryImpl implements AndroidFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Project createProject() {
-		ProjectImpl project = new ProjectImpl();
-		return project;
+	public Application createApplication() {
+		ApplicationImpl application = new ApplicationImpl();
+		return application;
 	}
 
 	/**

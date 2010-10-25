@@ -26,13 +26,13 @@ public interface AndroidFactory extends EFactory {
 	AndroidFactory eINSTANCE = org.eclipse.ese.android.model.android.impl.AndroidFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Project</em>'.
+	 * Returns a new object of class '<em>Application</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Project</em>'.
+	 * @return a new object of class '<em>Application</em>'.
 	 * @generated
 	 */
-	Project createProject();
+	Application createApplication();
 
 	/**
 	 * Returns a new object of class '<em>Activity</em>'.

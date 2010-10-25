@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.ese.android.model.android.Activity;
 import org.eclipse.ese.android.model.android.AndroidFactory;
 import org.eclipse.ese.android.model.android.AndroidPackage;
+import org.eclipse.ese.android.model.android.Application;
 import org.eclipse.ese.android.model.android.Button;
 import org.eclipse.ese.android.model.android.Link;
 import org.eclipse.ese.android.model.android.Project;
@@ -35,7 +36,7 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass projectEClass = null;
+	private EClass applicationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,8 +146,8 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getProject() {
-		return projectEClass;
+	public EClass getApplication() {
+		return applicationEClass;
 	}
 
 	/**
@@ -154,8 +155,8 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getProject_Name() {
-		return (EAttribute)projectEClass.getEStructuralFeatures().get(0);
+	public EAttribute getApplication_Name() {
+		return (EAttribute)applicationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -163,8 +164,8 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProject_Activities() {
-		return (EReference)projectEClass.getEStructuralFeatures().get(1);
+	public EReference getApplication_Activities() {
+		return (EReference)applicationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -285,9 +286,9 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		projectEClass = createEClass(PROJECT);
-		createEAttribute(projectEClass, PROJECT__NAME);
-		createEReference(projectEClass, PROJECT__ACTIVITIES);
+		applicationEClass = createEClass(APPLICATION);
+		createEAttribute(applicationEClass, APPLICATION__NAME);
+		createEReference(applicationEClass, APPLICATION__ACTIVITIES);
 
 		activityEClass = createEClass(ACTIVITY);
 		createEAttribute(activityEClass, ACTIVITY__NAME);
@@ -340,9 +341,9 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 		linkEClass.getESuperTypes().add(this.getWidget());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProject_Name(), ecorePackage.getEString(), "name", null, 1, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_Activities(), this.getActivity(), null, "activities", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getApplication_Name(), ecorePackage.getEString(), "name", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApplication_Activities(), this.getActivity(), null, "activities", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActivity_Name(), ecorePackage.getEString(), "name", null, 1, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

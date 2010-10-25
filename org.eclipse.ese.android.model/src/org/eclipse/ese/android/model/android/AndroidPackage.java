@@ -60,14 +60,14 @@ public interface AndroidPackage extends EPackage {
 	AndroidPackage eINSTANCE = org.eclipse.ese.android.model.android.impl.AndroidPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.ese.android.model.android.impl.ProjectImpl <em>Project</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.ese.android.model.android.impl.ApplicationImpl <em>Application</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.ese.android.model.android.impl.ProjectImpl
-	 * @see org.eclipse.ese.android.model.android.impl.AndroidPackageImpl#getProject()
+	 * @see org.eclipse.ese.android.model.android.impl.ApplicationImpl
+	 * @see org.eclipse.ese.android.model.android.impl.AndroidPackageImpl#getApplication()
 	 * @generated
 	 */
-	int PROJECT = 0;
+	int APPLICATION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -76,7 +76,7 @@ public interface AndroidPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__NAME = 0;
+	int APPLICATION__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
@@ -85,16 +85,16 @@ public interface AndroidPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__ACTIVITIES = 1;
+	int APPLICATION__ACTIVITIES = 1;
 
 	/**
-	 * The number of structural features of the '<em>Project</em>' class.
+	 * The number of structural features of the '<em>Application</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_FEATURE_COUNT = 2;
+	int APPLICATION_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.ese.android.model.android.impl.ActivityImpl <em>Activity</em>}' class.
@@ -284,36 +284,36 @@ public interface AndroidPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.ese.android.model.android.Project <em>Project</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.ese.android.model.android.Application <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Project</em>'.
-	 * @see org.eclipse.ese.android.model.android.Project
+	 * @return the meta object for class '<em>Application</em>'.
+	 * @see org.eclipse.ese.android.model.android.Application
 	 * @generated
 	 */
-	EClass getProject();
+	EClass getApplication();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.ese.android.model.android.Project#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.ese.android.model.android.Application#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.ese.android.model.android.Project#getName()
-	 * @see #getProject()
+	 * @see org.eclipse.ese.android.model.android.Application#getName()
+	 * @see #getApplication()
 	 * @generated
 	 */
-	EAttribute getProject_Name();
+	EAttribute getApplication_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.ese.android.model.android.Project#getActivities <em>Activities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.ese.android.model.android.Application#getActivities <em>Activities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Activities</em>'.
-	 * @see org.eclipse.ese.android.model.android.Project#getActivities()
-	 * @see #getProject()
+	 * @see org.eclipse.ese.android.model.android.Application#getActivities()
+	 * @see #getApplication()
 	 * @generated
 	 */
-	EReference getProject_Activities();
+	EReference getApplication_Activities();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.ese.android.model.android.Activity <em>Activity</em>}'.
@@ -442,14 +442,14 @@ public interface AndroidPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.ese.android.model.android.impl.ProjectImpl <em>Project</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.ese.android.model.android.impl.ApplicationImpl <em>Application</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.ese.android.model.android.impl.ProjectImpl
-		 * @see org.eclipse.ese.android.model.android.impl.AndroidPackageImpl#getProject()
+		 * @see org.eclipse.ese.android.model.android.impl.ApplicationImpl
+		 * @see org.eclipse.ese.android.model.android.impl.AndroidPackageImpl#getApplication()
 		 * @generated
 		 */
-		EClass PROJECT = eINSTANCE.getProject();
+		EClass APPLICATION = eINSTANCE.getApplication();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -457,7 +457,7 @@ public interface AndroidPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROJECT__NAME = eINSTANCE.getProject_Name();
+		EAttribute APPLICATION__NAME = eINSTANCE.getApplication_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Activities</b></em>' containment reference list feature.
@@ -465,7 +465,7 @@ public interface AndroidPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROJECT__ACTIVITIES = eINSTANCE.getProject_Activities();
+		EReference APPLICATION__ACTIVITIES = eINSTANCE.getApplication_Activities();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.ese.android.model.android.impl.ActivityImpl <em>Activity</em>}' class.
