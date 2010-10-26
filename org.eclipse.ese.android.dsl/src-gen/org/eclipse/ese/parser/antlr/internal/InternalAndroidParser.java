@@ -24,7 +24,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalAndroidParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Project'", "'Activity'", "'{'", "'}'", "'Text'", "'Button'", "'Spinner'", "'Link'", "'->'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Application'", "'Activity'", "'{'", "'}'", "'Text'", "'Button'", "'Spinner'", "'Link'", "'->'"
     };
     public static final int RULE_ML_COMMENT=7;
     public static final int RULE_ID=4;
@@ -232,7 +232,7 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleApplication
-    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:128:1: ruleApplication returns [EObject current=null] : ( 'Project' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+ ) ;
+    // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:128:1: ruleApplication returns [EObject current=null] : ( 'Application' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+ ) ;
     public final EObject ruleApplication() throws RecognitionException {
         EObject current = null;
 
@@ -243,15 +243,15 @@ public class InternalAndroidParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:133:6: ( ( 'Project' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+ ) )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:134:1: ( 'Project' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+ )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:133:6: ( ( 'Application' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+ ) )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:134:1: ( 'Application' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+ )
             {
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:134:1: ( 'Project' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+ )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:134:3: 'Project' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:134:1: ( 'Application' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+ )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:134:3: 'Application' ( (lv_name_1_0= RULE_ID ) ) ( (lv_activities_2_0= ruleActivity ) )+
             {
             match(input,11,FollowSets000.FOLLOW_11_in_ruleApplication239); 
 
-                    createLeafNode(grammarAccess.getApplicationAccess().getProjectKeyword_0(), null); 
+                    createLeafNode(grammarAccess.getApplicationAccess().getApplicationKeyword_0(), null); 
                 
             // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:138:1: ( (lv_name_1_0= RULE_ID ) )
             // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:139:1: (lv_name_1_0= RULE_ID )

@@ -131,9 +131,9 @@ ruleApplication returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-(	'Project' 
+(	'Application' 
     {
-        createLeafNode(grammarAccess.getApplicationAccess().getProjectKeyword_0(), null); 
+        createLeafNode(grammarAccess.getApplicationAccess().getApplicationKeyword_0(), null); 
     }
 (
 (

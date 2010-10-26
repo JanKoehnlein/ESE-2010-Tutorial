@@ -7,7 +7,7 @@ package org.eclipse.ese.ui.contentassist.antlr.internal;
 import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer;
 }
 
-T11 : 'Project' ;
+T11 : 'Application' ;
 T12 : 'Activity' ;
 T13 : '{' ;
 T14 : '}' ;

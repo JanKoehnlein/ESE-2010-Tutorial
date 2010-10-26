@@ -7,7 +7,7 @@ package org.eclipse.ese.parser.antlr.internal;
 import org.eclipse.xtext.parser.antlr.Lexer;
 }
 
-T11 : 'Project' ;
+T11 : 'Application' ;
 T12 : 'Activity' ;
 T13 : '{' ;
 T14 : '}' ;

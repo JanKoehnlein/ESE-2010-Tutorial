@@ -21,7 +21,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/example/android#//Application"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="Project"/>
+        <elements xsi:type="xtext:Keyword" value="Application"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>

@@ -7,7 +7,7 @@ Entry returns ecore::EObject:
 	Application | Activity;
 	
 Application:
-	'Project' name=ID 
+	'Application' name=ID 
 		activities+=Activity+;
 
 Activity:

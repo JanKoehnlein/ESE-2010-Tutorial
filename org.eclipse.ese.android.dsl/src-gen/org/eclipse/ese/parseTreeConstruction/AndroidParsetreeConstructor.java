@@ -162,11 +162,11 @@ protected class Entry_ActivityParserRuleCall_1 extends RuleCallToken {
 /************ begin Rule Application ****************
  *
  * Application:
- * 	"Project" name=ID activities+=Activity+;
+ * 	"Application" name=ID activities+=Activity+;
  *
  **/
 
-// "Project" name=ID activities+=Activity+
+// "Application" name=ID activities+=Activity+
 protected class Application_Group extends GroupToken {
 	
 	public Application_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -195,16 +195,16 @@ protected class Application_Group extends GroupToken {
 
 }
 
-// "Project"
-protected class Application_ProjectKeyword_0 extends KeywordToken  {
+// "Application"
+protected class Application_ApplicationKeyword_0 extends KeywordToken  {
 	
-	public Application_ProjectKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Application_ApplicationKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getApplicationAccess().getProjectKeyword_0();
+		return grammarAccess.getApplicationAccess().getApplicationKeyword_0();
 	}
 
     @Override
@@ -231,7 +231,7 @@ protected class Application_NameAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Application_ProjectKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Application_ApplicationKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}

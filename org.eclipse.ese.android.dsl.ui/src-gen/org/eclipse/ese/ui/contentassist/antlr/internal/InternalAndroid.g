@@ -408,11 +408,11 @@ rule__Application__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getApplicationAccess().getProjectKeyword_0()); }
+{ before(grammarAccess.getApplicationAccess().getApplicationKeyword_0()); }
 
-	'Project' 
+	'Application' 
 
-{ after(grammarAccess.getApplicationAccess().getProjectKeyword_0()); }
+{ after(grammarAccess.getApplicationAccess().getApplicationKeyword_0()); }
 )
 
 ;

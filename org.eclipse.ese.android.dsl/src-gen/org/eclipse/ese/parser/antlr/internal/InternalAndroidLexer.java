@@ -40,10 +40,10 @@ public class InternalAndroidLexer extends Lexer {
     public final void mT11() throws RecognitionException {
         try {
             int _type = T11;
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:10:5: ( 'Project' )
-            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:10:7: 'Project'
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:10:5: ( 'Application' )
+            // ../org.eclipse.ese.android.dsl/src-gen/org/eclipse/ese/parser/antlr/internal/InternalAndroid.g:10:7: 'Application'
             {
-            match("Project"); 
+            match("Application"); 
 
 
             }
@@ -718,59 +718,56 @@ public class InternalAndroidLexer extends Lexer {
         int alt12=16;
         int LA12_0 = input.LA(1);
 
-        if ( (LA12_0=='P') ) {
+        if ( (LA12_0=='A') ) {
             alt12 = mTokensHelper001();
         }
-        else if ( (LA12_0=='A') ) {
+        else if ( (LA12_0=='{') ) {
             alt12 = mTokensHelper002();
         }
-        else if ( (LA12_0=='{') ) {
+        else if ( (LA12_0=='}') ) {
             alt12 = mTokensHelper003();
         }
-        else if ( (LA12_0=='}') ) {
+        else if ( (LA12_0=='T') ) {
             alt12 = mTokensHelper004();
         }
-        else if ( (LA12_0=='T') ) {
+        else if ( (LA12_0=='B') ) {
             alt12 = mTokensHelper005();
         }
-        else if ( (LA12_0=='B') ) {
+        else if ( (LA12_0=='S') ) {
             alt12 = mTokensHelper006();
         }
-        else if ( (LA12_0=='S') ) {
+        else if ( (LA12_0=='L') ) {
             alt12 = mTokensHelper007();
         }
-        else if ( (LA12_0=='L') ) {
+        else if ( (LA12_0=='-') ) {
             alt12 = mTokensHelper008();
         }
-        else if ( (LA12_0=='-') ) {
+        else if ( (LA12_0=='^') ) {
             alt12 = mTokensHelper009();
         }
-        else if ( (LA12_0=='^') ) {
+        else if ( ((LA12_0>='C' && LA12_0<='K')||(LA12_0>='M' && LA12_0<='R')||(LA12_0>='U' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {
             alt12 = mTokensHelper010();
         }
-        else if ( ((LA12_0>='C' && LA12_0<='K')||(LA12_0>='M' && LA12_0<='O')||(LA12_0>='Q' && LA12_0<='R')||(LA12_0>='U' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {
+        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {
             alt12 = mTokensHelper011();
         }
-        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {
+        else if ( (LA12_0=='\"') ) {
             alt12 = mTokensHelper012();
         }
-        else if ( (LA12_0=='\"') ) {
+        else if ( (LA12_0=='\'') ) {
             alt12 = mTokensHelper013();
         }
-        else if ( (LA12_0=='\'') ) {
+        else if ( (LA12_0=='/') ) {
             alt12 = mTokensHelper014();
         }
-        else if ( (LA12_0=='/') ) {
+        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {
             alt12 = mTokensHelper015();
         }
-        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {
+        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<=',')||LA12_0=='.'||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFE')) ) {
             alt12 = mTokensHelper016();
         }
-        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<=',')||LA12_0=='.'||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFE')) ) {
-            alt12 = mTokensHelper017();
-        }
         else {
-            alt12 = mTokensHelper018();
+            alt12 = mTokensHelper017();
         }
         switch (alt12) {
             case 1 :
@@ -890,31 +887,55 @@ public class InternalAndroidLexer extends Lexer {
 
     }
     private int mTokensHelper001() throws RecognitionException {
-        int LA12_1 = input.LA(2);
+        switch ( input.LA(2) ) {
+        case 'p':
+            {
+            int LA12_17 = input.LA(3);
 
-        if ( (LA12_1=='r') ) {
-            int LA12_18 = input.LA(3);
+            if ( (LA12_17=='p') ) {
+                int LA12_32 = input.LA(4);
 
-            if ( (LA12_18=='o') ) {
-                int LA12_33 = input.LA(4);
+                if ( (LA12_32=='l') ) {
+                    int LA12_38 = input.LA(5);
 
-                if ( (LA12_33=='j') ) {
-                    int LA12_39 = input.LA(5);
+                    if ( (LA12_38=='i') ) {
+                        int LA12_44 = input.LA(6);
 
-                    if ( (LA12_39=='e') ) {
-                        int LA12_45 = input.LA(6);
+                        if ( (LA12_44=='c') ) {
+                            int LA12_50 = input.LA(7);
 
-                        if ( (LA12_45=='c') ) {
-                            int LA12_51 = input.LA(7);
+                            if ( (LA12_50=='a') ) {
+                                int LA12_54 = input.LA(8);
 
-                            if ( (LA12_51=='t') ) {
-                                int LA12_55 = input.LA(8);
+                                if ( (LA12_54=='t') ) {
+                                    int LA12_58 = input.LA(9);
 
-                                if ( ((LA12_55>='0' && LA12_55<='9')||(LA12_55>='A' && LA12_55<='Z')||LA12_55=='_'||(LA12_55>='a' && LA12_55<='z')) ) {
-                                    return 10;
+                                    if ( (LA12_58=='i') ) {
+                                        int LA12_61 = input.LA(10);
+
+                                        if ( (LA12_61=='o') ) {
+                                            int LA12_63 = input.LA(11);
+
+                                            if ( (LA12_63=='n') ) {
+                                                int LA12_64 = input.LA(12);
+
+                                                if ( ((LA12_64>='0' && LA12_64<='9')||(LA12_64>='A' && LA12_64<='Z')||LA12_64=='_'||(LA12_64>='a' && LA12_64<='z')) ) {
+                                                    return 10;
+                                                }
+                                                else {
+                                                    return 1;}
+                                            }
+                                            else {
+                                                return 10;}
+                                        }
+                                        else {
+                                            return 10;}
+                                    }
+                                    else {
+                                        return 10;}
                                 }
                                 else {
-                                    return 1;}
+                                    return 10;}
                             }
                             else {
                                 return 10;}
@@ -930,36 +951,30 @@ public class InternalAndroidLexer extends Lexer {
             }
             else {
                 return 10;}
-        }
-        else {
-            return 10;}
-    }
+            }
+        case 'c':
+            {
+            int LA12_18 = input.LA(3);
 
-    private int mTokensHelper002() throws RecognitionException {
-        int LA12_2 = input.LA(2);
+            if ( (LA12_18=='t') ) {
+                int LA12_33 = input.LA(4);
 
-        if ( (LA12_2=='c') ) {
-            int LA12_20 = input.LA(3);
+                if ( (LA12_33=='i') ) {
+                    int LA12_39 = input.LA(5);
 
-            if ( (LA12_20=='t') ) {
-                int LA12_34 = input.LA(4);
+                    if ( (LA12_39=='v') ) {
+                        int LA12_45 = input.LA(6);
 
-                if ( (LA12_34=='i') ) {
-                    int LA12_40 = input.LA(5);
+                        if ( (LA12_45=='i') ) {
+                            int LA12_51 = input.LA(7);
 
-                    if ( (LA12_40=='v') ) {
-                        int LA12_46 = input.LA(6);
+                            if ( (LA12_51=='t') ) {
+                                int LA12_55 = input.LA(8);
 
-                        if ( (LA12_46=='i') ) {
-                            int LA12_52 = input.LA(7);
+                                if ( (LA12_55=='y') ) {
+                                    int LA12_59 = input.LA(9);
 
-                            if ( (LA12_52=='t') ) {
-                                int LA12_56 = input.LA(8);
-
-                                if ( (LA12_56=='y') ) {
-                                    int LA12_60 = input.LA(9);
-
-                                    if ( ((LA12_60>='0' && LA12_60<='9')||(LA12_60>='A' && LA12_60<='Z')||LA12_60=='_'||(LA12_60>='a' && LA12_60<='z')) ) {
+                                    if ( ((LA12_59>='0' && LA12_59<='9')||(LA12_59>='A' && LA12_59<='Z')||LA12_59=='_'||(LA12_59>='a' && LA12_59<='z')) ) {
                                         return 10;
                                     }
                                     else {
@@ -982,32 +997,33 @@ public class InternalAndroidLexer extends Lexer {
             }
             else {
                 return 10;}
-        }
-        else {
+            }
+        default:
             return 10;}
+
     }
 
-    private int mTokensHelper003() throws RecognitionException {
+    private int mTokensHelper002() throws RecognitionException {
         return 3;
     }
 
-    private int mTokensHelper004() throws RecognitionException {
+    private int mTokensHelper003() throws RecognitionException {
         return 4;
     }
 
-    private int mTokensHelper005() throws RecognitionException {
-        int LA12_5 = input.LA(2);
+    private int mTokensHelper004() throws RecognitionException {
+        int LA12_4 = input.LA(2);
 
-        if ( (LA12_5=='e') ) {
-            int LA12_23 = input.LA(3);
+        if ( (LA12_4=='e') ) {
+            int LA12_22 = input.LA(3);
 
-            if ( (LA12_23=='x') ) {
-                int LA12_35 = input.LA(4);
+            if ( (LA12_22=='x') ) {
+                int LA12_34 = input.LA(4);
 
-                if ( (LA12_35=='t') ) {
-                    int LA12_41 = input.LA(5);
+                if ( (LA12_34=='t') ) {
+                    int LA12_40 = input.LA(5);
 
-                    if ( ((LA12_41>='0' && LA12_41<='9')||(LA12_41>='A' && LA12_41<='Z')||LA12_41=='_'||(LA12_41>='a' && LA12_41<='z')) ) {
+                    if ( ((LA12_40>='0' && LA12_40<='9')||(LA12_40>='A' && LA12_40<='Z')||LA12_40=='_'||(LA12_40>='a' && LA12_40<='z')) ) {
                         return 10;
                     }
                     else {
@@ -1023,25 +1039,25 @@ public class InternalAndroidLexer extends Lexer {
             return 10;}
     }
 
-    private int mTokensHelper006() throws RecognitionException {
-        int LA12_6 = input.LA(2);
+    private int mTokensHelper005() throws RecognitionException {
+        int LA12_5 = input.LA(2);
 
-        if ( (LA12_6=='u') ) {
-            int LA12_24 = input.LA(3);
+        if ( (LA12_5=='u') ) {
+            int LA12_23 = input.LA(3);
 
-            if ( (LA12_24=='t') ) {
-                int LA12_36 = input.LA(4);
+            if ( (LA12_23=='t') ) {
+                int LA12_35 = input.LA(4);
 
-                if ( (LA12_36=='t') ) {
-                    int LA12_42 = input.LA(5);
+                if ( (LA12_35=='t') ) {
+                    int LA12_41 = input.LA(5);
 
-                    if ( (LA12_42=='o') ) {
-                        int LA12_48 = input.LA(6);
+                    if ( (LA12_41=='o') ) {
+                        int LA12_47 = input.LA(6);
 
-                        if ( (LA12_48=='n') ) {
-                            int LA12_53 = input.LA(7);
+                        if ( (LA12_47=='n') ) {
+                            int LA12_52 = input.LA(7);
 
-                            if ( ((LA12_53>='0' && LA12_53<='9')||(LA12_53>='A' && LA12_53<='Z')||LA12_53=='_'||(LA12_53>='a' && LA12_53<='z')) ) {
+                            if ( ((LA12_52>='0' && LA12_52<='9')||(LA12_52>='A' && LA12_52<='Z')||LA12_52=='_'||(LA12_52>='a' && LA12_52<='z')) ) {
                                 return 10;
                             }
                             else {
@@ -1063,28 +1079,28 @@ public class InternalAndroidLexer extends Lexer {
             return 10;}
     }
 
-    private int mTokensHelper007() throws RecognitionException {
-        int LA12_7 = input.LA(2);
+    private int mTokensHelper006() throws RecognitionException {
+        int LA12_6 = input.LA(2);
 
-        if ( (LA12_7=='p') ) {
-            int LA12_25 = input.LA(3);
+        if ( (LA12_6=='p') ) {
+            int LA12_24 = input.LA(3);
 
-            if ( (LA12_25=='i') ) {
-                int LA12_37 = input.LA(4);
+            if ( (LA12_24=='i') ) {
+                int LA12_36 = input.LA(4);
 
-                if ( (LA12_37=='n') ) {
-                    int LA12_43 = input.LA(5);
+                if ( (LA12_36=='n') ) {
+                    int LA12_42 = input.LA(5);
 
-                    if ( (LA12_43=='n') ) {
-                        int LA12_49 = input.LA(6);
+                    if ( (LA12_42=='n') ) {
+                        int LA12_48 = input.LA(6);
 
-                        if ( (LA12_49=='e') ) {
-                            int LA12_54 = input.LA(7);
+                        if ( (LA12_48=='e') ) {
+                            int LA12_53 = input.LA(7);
 
-                            if ( (LA12_54=='r') ) {
-                                int LA12_58 = input.LA(8);
+                            if ( (LA12_53=='r') ) {
+                                int LA12_57 = input.LA(8);
 
-                                if ( ((LA12_58>='0' && LA12_58<='9')||(LA12_58>='A' && LA12_58<='Z')||LA12_58=='_'||(LA12_58>='a' && LA12_58<='z')) ) {
+                                if ( ((LA12_57>='0' && LA12_57<='9')||(LA12_57>='A' && LA12_57<='Z')||LA12_57=='_'||(LA12_57>='a' && LA12_57<='z')) ) {
                                     return 10;
                                 }
                                 else {
@@ -1109,19 +1125,19 @@ public class InternalAndroidLexer extends Lexer {
             return 10;}
     }
 
-    private int mTokensHelper008() throws RecognitionException {
-        int LA12_8 = input.LA(2);
+    private int mTokensHelper007() throws RecognitionException {
+        int LA12_7 = input.LA(2);
 
-        if ( (LA12_8=='i') ) {
-            int LA12_26 = input.LA(3);
+        if ( (LA12_7=='i') ) {
+            int LA12_25 = input.LA(3);
 
-            if ( (LA12_26=='n') ) {
-                int LA12_38 = input.LA(4);
+            if ( (LA12_25=='n') ) {
+                int LA12_37 = input.LA(4);
 
-                if ( (LA12_38=='k') ) {
-                    int LA12_44 = input.LA(5);
+                if ( (LA12_37=='k') ) {
+                    int LA12_43 = input.LA(5);
 
-                    if ( ((LA12_44>='0' && LA12_44<='9')||(LA12_44>='A' && LA12_44<='Z')||LA12_44=='_'||(LA12_44>='a' && LA12_44<='z')) ) {
+                    if ( ((LA12_43>='0' && LA12_43<='9')||(LA12_43>='A' && LA12_43<='Z')||LA12_43=='_'||(LA12_43>='a' && LA12_43<='z')) ) {
                         return 10;
                     }
                     else {
@@ -1137,32 +1153,42 @@ public class InternalAndroidLexer extends Lexer {
             return 10;}
     }
 
-    private int mTokensHelper009() throws RecognitionException {
-        int LA12_9 = input.LA(2);
+    private int mTokensHelper008() throws RecognitionException {
+        int LA12_8 = input.LA(2);
 
-        if ( (LA12_9=='>') ) {
+        if ( (LA12_8=='>') ) {
             return 9;
         }
         else {
             return 16;}
     }
 
-    private int mTokensHelper010() throws RecognitionException {
-        int LA12_10 = input.LA(2);
+    private int mTokensHelper009() throws RecognitionException {
+        int LA12_9 = input.LA(2);
 
-        if ( ((LA12_10>='A' && LA12_10<='Z')||LA12_10=='_'||(LA12_10>='a' && LA12_10<='z')) ) {
+        if ( ((LA12_9>='A' && LA12_9<='Z')||LA12_9=='_'||(LA12_9>='a' && LA12_9<='z')) ) {
             return 10;
         }
         else {
             return 16;}
     }
 
-    private int mTokensHelper011() throws RecognitionException {
+    private int mTokensHelper010() throws RecognitionException {
         return 10;
     }
 
-    private int mTokensHelper012() throws RecognitionException {
+    private int mTokensHelper011() throws RecognitionException {
         return 11;
+    }
+
+    private int mTokensHelper012() throws RecognitionException {
+        int LA12_12 = input.LA(2);
+
+        if ( ((LA12_12>='\u0000' && LA12_12<='\uFFFE')) ) {
+            return 12;
+        }
+        else {
+            return 16;}
     }
 
     private int mTokensHelper013() throws RecognitionException {
@@ -1176,16 +1202,6 @@ public class InternalAndroidLexer extends Lexer {
     }
 
     private int mTokensHelper014() throws RecognitionException {
-        int LA12_14 = input.LA(2);
-
-        if ( ((LA12_14>='\u0000' && LA12_14<='\uFFFE')) ) {
-            return 12;
-        }
-        else {
-            return 16;}
-    }
-
-    private int mTokensHelper015() throws RecognitionException {
         switch ( input.LA(2) ) {
         case '/':
             {
@@ -1200,15 +1216,15 @@ public class InternalAndroidLexer extends Lexer {
 
     }
 
-    private int mTokensHelper016() throws RecognitionException {
+    private int mTokensHelper015() throws RecognitionException {
         return 15;
     }
 
-    private int mTokensHelper017() throws RecognitionException {
+    private int mTokensHelper016() throws RecognitionException {
         return 16;
     }
 
-    private int mTokensHelper018() throws RecognitionException {
+    private int mTokensHelper017() throws RecognitionException {
         NoViableAltException nvae =
             new NoViableAltException("1:1: Tokens : ( T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );", 12, 0, input);
 

@@ -40,21 +40,21 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	public class ApplicationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Application");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cProjectKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cApplicationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cActivitiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cActivitiesActivityParserRuleCall_2_0 = (RuleCall)cActivitiesAssignment_2.eContents().get(0);
 		
 		//Application:
-		//	"Project" name=ID activities+=Activity+;
+		//	"Application" name=ID activities+=Activity+;
 		public ParserRule getRule() { return rule; }
 
-		//"Project" name=ID activities+=Activity+
+		//"Application" name=ID activities+=Activity+
 		public Group getGroup() { return cGroup; }
 
-		//"Project"
-		public Keyword getProjectKeyword_0() { return cProjectKeyword_0; }
+		//"Application"
+		public Keyword getApplicationKeyword_0() { return cApplicationKeyword_0; }
 
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -312,7 +312,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Application:
-	//	"Project" name=ID activities+=Activity+;
+	//	"Application" name=ID activities+=Activity+;
 	public ApplicationElements getApplicationAccess() {
 		return (pApplication != null) ? pApplication : (pApplication = new ApplicationElements());
 	}
