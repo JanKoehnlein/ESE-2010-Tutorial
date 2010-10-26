@@ -91,11 +91,11 @@ ruleEntry returns [EObject current=null]
     }:
 (
     { 
-        currentNode=createCompositeNode(grammarAccess.getEntryAccess().getProjectParserRuleCall_0(), currentNode); 
+        currentNode=createCompositeNode(grammarAccess.getEntryAccess().getApplicationParserRuleCall_0(), currentNode); 
     }
-    this_Project_0=ruleProject
+    this_Application_0=ruleApplication
     { 
-        $current = $this_Project_0.current; 
+        $current = $this_Application_0.current; 
         currentNode = currentNode.getParent();
     }
 
@@ -115,17 +115,17 @@ ruleEntry returns [EObject current=null]
 
 
 
-// Entry rule entryRuleProject
-entryRuleProject returns [EObject current=null] 
+// Entry rule entryRuleApplication
+entryRuleApplication returns [EObject current=null] 
 	:
-	{ currentNode = createCompositeNode(grammarAccess.getProjectRule(), currentNode); }
-	 iv_ruleProject=ruleProject 
-	 { $current=$iv_ruleProject.current; } 
+	{ currentNode = createCompositeNode(grammarAccess.getApplicationRule(), currentNode); }
+	 iv_ruleApplication=ruleApplication 
+	 { $current=$iv_ruleApplication.current; } 
 	 EOF 
 ;
 
-// Rule Project
-ruleProject returns [EObject current=null] 
+// Rule Application
+ruleApplication returns [EObject current=null] 
     @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
     }
     @after { resetLookahead(); 
@@ -133,17 +133,17 @@ ruleProject returns [EObject current=null]
     }:
 (	'Project' 
     {
-        createLeafNode(grammarAccess.getProjectAccess().getProjectKeyword_0(), null); 
+        createLeafNode(grammarAccess.getApplicationAccess().getProjectKeyword_0(), null); 
     }
 (
 (
 		lv_name_1_0=RULE_ID
 		{
-			createLeafNode(grammarAccess.getProjectAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
+			createLeafNode(grammarAccess.getApplicationAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
 		}
 		{
 	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getProjectRule().getType().getClassifier());
+	            $current = factory.create(grammarAccess.getApplicationRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode, $current);
 	        }
 	        try {
@@ -162,11 +162,11 @@ ruleProject returns [EObject current=null]
 )(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getProjectAccess().getActivitiesActivityParserRuleCall_2_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getApplicationAccess().getActivitiesActivityParserRuleCall_2_0(), currentNode); 
 	    }
 		lv_activities_2_0=ruleActivity		{
 	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getProjectRule().getType().getClassifier());
+	            $current = factory.create(grammarAccess.getApplicationRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
 	        }
 	        try {

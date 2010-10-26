@@ -16,9 +16,9 @@
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:ParserRule" name="Project">
+    <rules xsi:type="xtext:ParserRule" name="Application">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/example/android#//Project"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/example/android#//Application"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="Project"/>

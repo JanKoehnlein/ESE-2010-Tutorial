@@ -6,7 +6,7 @@ Bundle-Version: 1.0.0
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipse.ese.android.model.android,
  org.eclipse.ese.android.model.android.impl,
  org.eclipse.ese.android.model.android.util

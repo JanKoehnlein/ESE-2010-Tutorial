@@ -27,7 +27,7 @@ public class AndroidFormatter extends AbstractDeclarativeFormatter {
 			c.setLinewrap(1).before(pair.getSecond());
 			c.setLinewrap(2).after(pair.getSecond());
 		}
-		c.setLinewrap(2).after(f.getProjectAccess().getNameAssignment_1());
+		c.setLinewrap(2).after(f.getApplicationAccess().getNameAssignment_1());
 		c.setLinewrap(1).after(f.getWidgetRule());
 
 		c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());

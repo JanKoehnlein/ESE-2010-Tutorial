@@ -25,14 +25,14 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Project'", "'Activity'", "'{'", "'}'", "'Text'", "'Button'", "'Spinner'", "'Link'", "'->'"
     };
+    public static final int RULE_ML_COMMENT=7;
     public static final int RULE_ID=4;
+    public static final int RULE_WS=9;
+    public static final int EOF=-1;
+    public static final int RULE_INT=6;
     public static final int RULE_STRING=5;
     public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_INT=6;
-    public static final int RULE_WS=9;
     public static final int RULE_SL_COMMENT=8;
-    public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=7;
 
         public InternalAndroidParser(TokenStream input) {
             super(input);
@@ -138,20 +138,20 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
     // $ANTLR end ruleEntry
 
 
-    // $ANTLR start entryRuleProject
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:89:1: entryRuleProject : ruleProject EOF ;
-    public final void entryRuleProject() throws RecognitionException {
+    // $ANTLR start entryRuleApplication
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:89:1: entryRuleApplication : ruleApplication EOF ;
+    public final void entryRuleApplication() throws RecognitionException {
         try {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:90:1: ( ruleProject EOF )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:91:1: ruleProject EOF
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:90:1: ( ruleApplication EOF )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:91:1: ruleApplication EOF
             {
-             before(grammarAccess.getProjectRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleProject_in_entryRuleProject121);
-            ruleProject();
+             before(grammarAccess.getApplicationRule()); 
+            pushFollow(FollowSets000.FOLLOW_ruleApplication_in_entryRuleApplication121);
+            ruleApplication();
             _fsp--;
 
-             after(grammarAccess.getProjectRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleProject128); 
+             after(grammarAccess.getApplicationRule()); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleApplication128); 
 
             }
 
@@ -164,34 +164,34 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end entryRuleProject
+    // $ANTLR end entryRuleApplication
 
 
-    // $ANTLR start ruleProject
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:98:1: ruleProject : ( ( rule__Project__Group__0 ) ) ;
-    public final void ruleProject() throws RecognitionException {
+    // $ANTLR start ruleApplication
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:98:1: ruleApplication : ( ( rule__Application__Group__0 ) ) ;
+    public final void ruleApplication() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:102:2: ( ( ( rule__Project__Group__0 ) ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:103:1: ( ( rule__Project__Group__0 ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:102:2: ( ( ( rule__Application__Group__0 ) ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:103:1: ( ( rule__Application__Group__0 ) )
             {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:103:1: ( ( rule__Project__Group__0 ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:104:1: ( rule__Project__Group__0 )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:103:1: ( ( rule__Application__Group__0 ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:104:1: ( rule__Application__Group__0 )
             {
-             before(grammarAccess.getProjectAccess().getGroup()); 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:105:1: ( rule__Project__Group__0 )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:105:2: rule__Project__Group__0
+             before(grammarAccess.getApplicationAccess().getGroup()); 
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:105:1: ( rule__Application__Group__0 )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:105:2: rule__Application__Group__0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Project__Group__0_in_ruleProject154);
-            rule__Project__Group__0();
+            pushFollow(FollowSets000.FOLLOW_rule__Application__Group__0_in_ruleApplication154);
+            rule__Application__Group__0();
             _fsp--;
 
 
             }
 
-             after(grammarAccess.getProjectAccess().getGroup()); 
+             after(grammarAccess.getApplicationAccess().getGroup()); 
 
             }
 
@@ -210,7 +210,7 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end ruleProject
+    // $ANTLR end ruleApplication
 
 
     // $ANTLR start entryRuleActivity
@@ -739,13 +739,13 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entry__Alternatives
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:313:1: rule__Entry__Alternatives : ( ( ruleProject ) | ( ruleActivity ) );
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:313:1: rule__Entry__Alternatives : ( ( ruleApplication ) | ( ruleActivity ) );
     public final void rule__Entry__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:317:1: ( ( ruleProject ) | ( ruleActivity ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:317:1: ( ( ruleApplication ) | ( ruleActivity ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -757,23 +757,23 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("313:1: rule__Entry__Alternatives : ( ( ruleProject ) | ( ruleActivity ) );", 1, 0, input);
+                    new NoViableAltException("313:1: rule__Entry__Alternatives : ( ( ruleApplication ) | ( ruleActivity ) );", 1, 0, input);
 
                 throw nvae;
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:318:1: ( ruleProject )
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:318:1: ( ruleApplication )
                     {
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:318:1: ( ruleProject )
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:319:1: ruleProject
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:318:1: ( ruleApplication )
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:319:1: ruleApplication
                     {
-                     before(grammarAccess.getEntryAccess().getProjectParserRuleCall_0()); 
-                    pushFollow(FollowSets000.FOLLOW_ruleProject_in_rule__Entry__Alternatives610);
-                    ruleProject();
+                     before(grammarAccess.getEntryAccess().getApplicationParserRuleCall_0()); 
+                    pushFollow(FollowSets000.FOLLOW_ruleApplication_in_rule__Entry__Alternatives610);
+                    ruleApplication();
                     _fsp--;
 
-                     after(grammarAccess.getEntryAccess().getProjectParserRuleCall_0()); 
+                     after(grammarAccess.getEntryAccess().getApplicationParserRuleCall_0()); 
 
                     }
 
@@ -1013,22 +1013,22 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__IdOrString__Alternatives
 
 
-    // $ANTLR start rule__Project__Group__0
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:393:1: rule__Project__Group__0 : rule__Project__Group__0__Impl rule__Project__Group__1 ;
-    public final void rule__Project__Group__0() throws RecognitionException {
+    // $ANTLR start rule__Application__Group__0
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:393:1: rule__Application__Group__0 : rule__Application__Group__0__Impl rule__Application__Group__1 ;
+    public final void rule__Application__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:397:1: ( rule__Project__Group__0__Impl rule__Project__Group__1 )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:398:2: rule__Project__Group__0__Impl rule__Project__Group__1
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:397:1: ( rule__Application__Group__0__Impl rule__Application__Group__1 )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:398:2: rule__Application__Group__0__Impl rule__Application__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Project__Group__0__Impl_in_rule__Project__Group__0789);
-            rule__Project__Group__0__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Application__Group__0__Impl_in_rule__Application__Group__0789);
+            rule__Application__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Project__Group__1_in_rule__Project__Group__0792);
-            rule__Project__Group__1();
+            pushFollow(FollowSets000.FOLLOW_rule__Application__Group__1_in_rule__Application__Group__0792);
+            rule__Application__Group__1();
             _fsp--;
 
 
@@ -1046,12 +1046,12 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Project__Group__0
+    // $ANTLR end rule__Application__Group__0
 
 
-    // $ANTLR start rule__Project__Group__0__Impl
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:405:1: rule__Project__Group__0__Impl : ( 'Project' ) ;
-    public final void rule__Project__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start rule__Application__Group__0__Impl
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:405:1: rule__Application__Group__0__Impl : ( 'Project' ) ;
+    public final void rule__Application__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -1062,9 +1062,9 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
             // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:410:1: ( 'Project' )
             // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:411:1: 'Project'
             {
-             before(grammarAccess.getProjectAccess().getProjectKeyword_0()); 
-            match(input,11,FollowSets000.FOLLOW_11_in_rule__Project__Group__0__Impl820); 
-             after(grammarAccess.getProjectAccess().getProjectKeyword_0()); 
+             before(grammarAccess.getApplicationAccess().getProjectKeyword_0()); 
+            match(input,11,FollowSets000.FOLLOW_11_in_rule__Application__Group__0__Impl820); 
+             after(grammarAccess.getApplicationAccess().getProjectKeyword_0()); 
 
             }
 
@@ -1083,25 +1083,25 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Project__Group__0__Impl
+    // $ANTLR end rule__Application__Group__0__Impl
 
 
-    // $ANTLR start rule__Project__Group__1
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:424:1: rule__Project__Group__1 : rule__Project__Group__1__Impl rule__Project__Group__2 ;
-    public final void rule__Project__Group__1() throws RecognitionException {
+    // $ANTLR start rule__Application__Group__1
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:424:1: rule__Application__Group__1 : rule__Application__Group__1__Impl rule__Application__Group__2 ;
+    public final void rule__Application__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:428:1: ( rule__Project__Group__1__Impl rule__Project__Group__2 )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:429:2: rule__Project__Group__1__Impl rule__Project__Group__2
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:428:1: ( rule__Application__Group__1__Impl rule__Application__Group__2 )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:429:2: rule__Application__Group__1__Impl rule__Application__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Project__Group__1__Impl_in_rule__Project__Group__1851);
-            rule__Project__Group__1__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Application__Group__1__Impl_in_rule__Application__Group__1851);
+            rule__Application__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Project__Group__2_in_rule__Project__Group__1854);
-            rule__Project__Group__2();
+            pushFollow(FollowSets000.FOLLOW_rule__Application__Group__2_in_rule__Application__Group__1854);
+            rule__Application__Group__2();
             _fsp--;
 
 
@@ -1119,34 +1119,34 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Project__Group__1
+    // $ANTLR end rule__Application__Group__1
 
 
-    // $ANTLR start rule__Project__Group__1__Impl
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:436:1: rule__Project__Group__1__Impl : ( ( rule__Project__NameAssignment_1 ) ) ;
-    public final void rule__Project__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start rule__Application__Group__1__Impl
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:436:1: rule__Application__Group__1__Impl : ( ( rule__Application__NameAssignment_1 ) ) ;
+    public final void rule__Application__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:440:1: ( ( ( rule__Project__NameAssignment_1 ) ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:441:1: ( ( rule__Project__NameAssignment_1 ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:440:1: ( ( ( rule__Application__NameAssignment_1 ) ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:441:1: ( ( rule__Application__NameAssignment_1 ) )
             {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:441:1: ( ( rule__Project__NameAssignment_1 ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:442:1: ( rule__Project__NameAssignment_1 )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:441:1: ( ( rule__Application__NameAssignment_1 ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:442:1: ( rule__Application__NameAssignment_1 )
             {
-             before(grammarAccess.getProjectAccess().getNameAssignment_1()); 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:443:1: ( rule__Project__NameAssignment_1 )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:443:2: rule__Project__NameAssignment_1
+             before(grammarAccess.getApplicationAccess().getNameAssignment_1()); 
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:443:1: ( rule__Application__NameAssignment_1 )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:443:2: rule__Application__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Project__NameAssignment_1_in_rule__Project__Group__1__Impl881);
-            rule__Project__NameAssignment_1();
+            pushFollow(FollowSets000.FOLLOW_rule__Application__NameAssignment_1_in_rule__Application__Group__1__Impl881);
+            rule__Application__NameAssignment_1();
             _fsp--;
 
 
             }
 
-             after(grammarAccess.getProjectAccess().getNameAssignment_1()); 
+             after(grammarAccess.getApplicationAccess().getNameAssignment_1()); 
 
             }
 
@@ -1165,21 +1165,21 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Project__Group__1__Impl
+    // $ANTLR end rule__Application__Group__1__Impl
 
 
-    // $ANTLR start rule__Project__Group__2
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:453:1: rule__Project__Group__2 : rule__Project__Group__2__Impl ;
-    public final void rule__Project__Group__2() throws RecognitionException {
+    // $ANTLR start rule__Application__Group__2
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:453:1: rule__Application__Group__2 : rule__Application__Group__2__Impl ;
+    public final void rule__Application__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:457:1: ( rule__Project__Group__2__Impl )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:458:2: rule__Project__Group__2__Impl
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:457:1: ( rule__Application__Group__2__Impl )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:458:2: rule__Application__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Project__Group__2__Impl_in_rule__Project__Group__2911);
-            rule__Project__Group__2__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Application__Group__2__Impl_in_rule__Application__Group__2911);
+            rule__Application__Group__2__Impl();
             _fsp--;
 
 
@@ -1197,45 +1197,45 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Project__Group__2
+    // $ANTLR end rule__Application__Group__2
 
 
-    // $ANTLR start rule__Project__Group__2__Impl
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:464:1: rule__Project__Group__2__Impl : ( ( ( rule__Project__ActivitiesAssignment_2 ) ) ( ( rule__Project__ActivitiesAssignment_2 )* ) ) ;
-    public final void rule__Project__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start rule__Application__Group__2__Impl
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:464:1: rule__Application__Group__2__Impl : ( ( ( rule__Application__ActivitiesAssignment_2 ) ) ( ( rule__Application__ActivitiesAssignment_2 )* ) ) ;
+    public final void rule__Application__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:468:1: ( ( ( ( rule__Project__ActivitiesAssignment_2 ) ) ( ( rule__Project__ActivitiesAssignment_2 )* ) ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:469:1: ( ( ( rule__Project__ActivitiesAssignment_2 ) ) ( ( rule__Project__ActivitiesAssignment_2 )* ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:468:1: ( ( ( ( rule__Application__ActivitiesAssignment_2 ) ) ( ( rule__Application__ActivitiesAssignment_2 )* ) ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:469:1: ( ( ( rule__Application__ActivitiesAssignment_2 ) ) ( ( rule__Application__ActivitiesAssignment_2 )* ) )
             {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:469:1: ( ( ( rule__Project__ActivitiesAssignment_2 ) ) ( ( rule__Project__ActivitiesAssignment_2 )* ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:470:1: ( ( rule__Project__ActivitiesAssignment_2 ) ) ( ( rule__Project__ActivitiesAssignment_2 )* )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:469:1: ( ( ( rule__Application__ActivitiesAssignment_2 ) ) ( ( rule__Application__ActivitiesAssignment_2 )* ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:470:1: ( ( rule__Application__ActivitiesAssignment_2 ) ) ( ( rule__Application__ActivitiesAssignment_2 )* )
             {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:470:1: ( ( rule__Project__ActivitiesAssignment_2 ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:471:1: ( rule__Project__ActivitiesAssignment_2 )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:470:1: ( ( rule__Application__ActivitiesAssignment_2 ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:471:1: ( rule__Application__ActivitiesAssignment_2 )
             {
-             before(grammarAccess.getProjectAccess().getActivitiesAssignment_2()); 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:472:1: ( rule__Project__ActivitiesAssignment_2 )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:472:2: rule__Project__ActivitiesAssignment_2
+             before(grammarAccess.getApplicationAccess().getActivitiesAssignment_2()); 
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:472:1: ( rule__Application__ActivitiesAssignment_2 )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:472:2: rule__Application__ActivitiesAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Project__ActivitiesAssignment_2_in_rule__Project__Group__2__Impl940);
-            rule__Project__ActivitiesAssignment_2();
+            pushFollow(FollowSets000.FOLLOW_rule__Application__ActivitiesAssignment_2_in_rule__Application__Group__2__Impl940);
+            rule__Application__ActivitiesAssignment_2();
             _fsp--;
 
 
             }
 
-             after(grammarAccess.getProjectAccess().getActivitiesAssignment_2()); 
+             after(grammarAccess.getApplicationAccess().getActivitiesAssignment_2()); 
 
             }
 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:475:1: ( ( rule__Project__ActivitiesAssignment_2 )* )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:476:1: ( rule__Project__ActivitiesAssignment_2 )*
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:475:1: ( ( rule__Application__ActivitiesAssignment_2 )* )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:476:1: ( rule__Application__ActivitiesAssignment_2 )*
             {
-             before(grammarAccess.getProjectAccess().getActivitiesAssignment_2()); 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:477:1: ( rule__Project__ActivitiesAssignment_2 )*
+             before(grammarAccess.getApplicationAccess().getActivitiesAssignment_2()); 
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:477:1: ( rule__Application__ActivitiesAssignment_2 )*
             loop4:
             do {
                 int alt4=2;
@@ -1248,10 +1248,10 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:477:2: rule__Project__ActivitiesAssignment_2
+            	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:477:2: rule__Application__ActivitiesAssignment_2
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Project__ActivitiesAssignment_2_in_rule__Project__Group__2__Impl952);
-            	    rule__Project__ActivitiesAssignment_2();
+            	    pushFollow(FollowSets000.FOLLOW_rule__Application__ActivitiesAssignment_2_in_rule__Application__Group__2__Impl952);
+            	    rule__Application__ActivitiesAssignment_2();
             	    _fsp--;
 
 
@@ -1263,7 +1263,7 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getProjectAccess().getActivitiesAssignment_2()); 
+             after(grammarAccess.getApplicationAccess().getActivitiesAssignment_2()); 
 
             }
 
@@ -1285,7 +1285,7 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Project__Group__2__Impl
+    // $ANTLR end rule__Application__Group__2__Impl
 
 
     // $ANTLR start rule__Activity__Group__0
@@ -2444,9 +2444,9 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__Link__Group__3__Impl
 
 
-    // $ANTLR start rule__Project__NameAssignment_1
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:971:1: rule__Project__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Project__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start rule__Application__NameAssignment_1
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:971:1: rule__Application__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Application__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -2457,9 +2457,9 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
             // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:976:1: ( RULE_ID )
             // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:977:1: RULE_ID
             {
-             before(grammarAccess.getProjectAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Project__NameAssignment_11928); 
-             after(grammarAccess.getProjectAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getApplicationAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Application__NameAssignment_11928); 
+             after(grammarAccess.getApplicationAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -2478,12 +2478,12 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Project__NameAssignment_1
+    // $ANTLR end rule__Application__NameAssignment_1
 
 
-    // $ANTLR start rule__Project__ActivitiesAssignment_2
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:986:1: rule__Project__ActivitiesAssignment_2 : ( ruleActivity ) ;
-    public final void rule__Project__ActivitiesAssignment_2() throws RecognitionException {
+    // $ANTLR start rule__Application__ActivitiesAssignment_2
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:986:1: rule__Application__ActivitiesAssignment_2 : ( ruleActivity ) ;
+    public final void rule__Application__ActivitiesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -2494,12 +2494,12 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
             // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:991:1: ( ruleActivity )
             // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:992:1: ruleActivity
             {
-             before(grammarAccess.getProjectAccess().getActivitiesActivityParserRuleCall_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleActivity_in_rule__Project__ActivitiesAssignment_21959);
+             before(grammarAccess.getApplicationAccess().getActivitiesActivityParserRuleCall_2_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleActivity_in_rule__Application__ActivitiesAssignment_21959);
             ruleActivity();
             _fsp--;
 
-             after(grammarAccess.getProjectAccess().getActivitiesActivityParserRuleCall_2_0()); 
+             after(grammarAccess.getApplicationAccess().getActivitiesActivityParserRuleCall_2_0()); 
 
             }
 
@@ -2518,7 +2518,7 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Project__ActivitiesAssignment_2
+    // $ANTLR end rule__Application__ActivitiesAssignment_2
 
 
     // $ANTLR start rule__Activity__NameAssignment_1
@@ -2810,9 +2810,9 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleEntry_in_entryRuleEntry61 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleEntry68 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entry__Alternatives_in_ruleEntry94 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleProject_in_entryRuleProject121 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleProject128 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Project__Group__0_in_ruleProject154 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleApplication_in_entryRuleApplication121 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleApplication128 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Application__Group__0_in_ruleApplication154 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleActivity_in_entryRuleActivity181 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleActivity188 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Activity__Group__0_in_ruleActivity214 = new BitSet(new long[]{0x0000000000000002L});
@@ -2834,7 +2834,7 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleIdOrString_in_entryRuleIdOrString541 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleIdOrString548 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__IdOrString__Alternatives_in_ruleIdOrString574 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleProject_in_rule__Entry__Alternatives610 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleApplication_in_rule__Entry__Alternatives610 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleActivity_in_rule__Entry__Alternatives627 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleText_in_rule__Widget__Alternatives659 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleButton_in_rule__Widget__Alternatives676 = new BitSet(new long[]{0x0000000000000002L});
@@ -2842,15 +2842,15 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleLink_in_rule__Widget__Alternatives710 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_ID_in_rule__IdOrString__Alternatives742 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_STRING_in_rule__IdOrString__Alternatives759 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Project__Group__0__Impl_in_rule__Project__Group__0789 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Project__Group__1_in_rule__Project__Group__0792 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_rule__Project__Group__0__Impl820 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Project__Group__1__Impl_in_rule__Project__Group__1851 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__Project__Group__2_in_rule__Project__Group__1854 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Project__NameAssignment_1_in_rule__Project__Group__1__Impl881 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Project__Group__2__Impl_in_rule__Project__Group__2911 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Project__ActivitiesAssignment_2_in_rule__Project__Group__2__Impl940 = new BitSet(new long[]{0x0000000000001002L});
-        public static final BitSet FOLLOW_rule__Project__ActivitiesAssignment_2_in_rule__Project__Group__2__Impl952 = new BitSet(new long[]{0x0000000000001002L});
+        public static final BitSet FOLLOW_rule__Application__Group__0__Impl_in_rule__Application__Group__0789 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Application__Group__1_in_rule__Application__Group__0792 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_11_in_rule__Application__Group__0__Impl820 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Application__Group__1__Impl_in_rule__Application__Group__1851 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__Application__Group__2_in_rule__Application__Group__1854 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Application__NameAssignment_1_in_rule__Application__Group__1__Impl881 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Application__Group__2__Impl_in_rule__Application__Group__2911 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Application__ActivitiesAssignment_2_in_rule__Application__Group__2__Impl940 = new BitSet(new long[]{0x0000000000001002L});
+        public static final BitSet FOLLOW_rule__Application__ActivitiesAssignment_2_in_rule__Application__Group__2__Impl952 = new BitSet(new long[]{0x0000000000001002L});
         public static final BitSet FOLLOW_rule__Activity__Group__0__Impl_in_rule__Activity__Group__0991 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Activity__Group__1_in_rule__Activity__Group__0994 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_12_in_rule__Activity__Group__0__Impl1022 = new BitSet(new long[]{0x0000000000000002L});
@@ -2891,8 +2891,8 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_19_in_rule__Link__Group__2__Impl1827 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Link__Group__3__Impl_in_rule__Link__Group__31858 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Link__ActivityAssignment_3_in_rule__Link__Group__3__Impl1885 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Project__NameAssignment_11928 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleActivity_in_rule__Project__ActivitiesAssignment_21959 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Application__NameAssignment_11928 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleActivity_in_rule__Application__ActivitiesAssignment_21959 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_ID_in_rule__Activity__NameAssignment_11990 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleWidget_in_rule__Activity__WidgetsAssignment_32021 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleIdOrString_in_rule__Text__NameAssignment_12052 = new BitSet(new long[]{0x0000000000000002L});

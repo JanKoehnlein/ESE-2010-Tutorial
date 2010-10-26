@@ -32,7 +32,7 @@ protected class ThisRootNode extends RootToken {
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
 			case 0: return new Entry_Alternatives(this, this, 0, inst);
-			case 1: return new Project_Group(this, this, 1, inst);
+			case 1: return new Application_Group(this, this, 1, inst);
 			case 2: return new Activity_Group(this, this, 2, inst);
 			case 3: return new Widget_Alternatives(this, this, 3, inst);
 			case 4: return new Text_Group(this, this, 4, inst);
@@ -48,11 +48,11 @@ protected class ThisRootNode extends RootToken {
 /************ begin Rule Entry ****************
  *
  * Entry returns ecore::EObject:
- * 	Project | Activity;
+ * 	Application | Activity;
  *
  **/
 
-// Project | Activity
+// Application | Activity
 protected class Entry_Alternatives extends AlternativesToken {
 
 	public Entry_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -67,7 +67,7 @@ protected class Entry_Alternatives extends AlternativesToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Entry_ProjectParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Entry_ApplicationParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
 			case 1: return new Entry_ActivityParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
@@ -76,38 +76,38 @@ protected class Entry_Alternatives extends AlternativesToken {
     @Override
 	public IEObjectConsumer tryConsume() {
 		if(getEObject().eClass() != grammarAccess.getActivityRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getProjectRule().getType().getClassifier())
+		   getEObject().eClass() != grammarAccess.getApplicationRule().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
 
 }
 
-// Project
-protected class Entry_ProjectParserRuleCall_0 extends RuleCallToken {
+// Application
+protected class Entry_ApplicationParserRuleCall_0 extends RuleCallToken {
 	
-	public Entry_ProjectParserRuleCall_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Entry_ApplicationParserRuleCall_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getEntryAccess().getProjectParserRuleCall_0();
+		return grammarAccess.getEntryAccess().getApplicationParserRuleCall_0();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Project_Group(this, this, 0, inst);
+			case 0: return new Application_Group(this, this, 0, inst);
 			default: return null;
 		}	
 	}
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getProjectRule().getType().getClassifier())
+		if(getEObject().eClass() != grammarAccess.getApplicationRule().getType().getClassifier())
 			return null;
-		if(checkForRecursion(Project_Group.class, eObjectConsumer)) return null;
+		if(checkForRecursion(Application_Group.class, eObjectConsumer)) return null;
 		return eObjectConsumer;
 	}
 	
@@ -159,36 +159,36 @@ protected class Entry_ActivityParserRuleCall_1 extends RuleCallToken {
 /************ end Rule Entry ****************/
 
 
-/************ begin Rule Project ****************
+/************ begin Rule Application ****************
  *
- * Project:
+ * Application:
  * 	"Project" name=ID activities+=Activity+;
  *
  **/
 
 // "Project" name=ID activities+=Activity+
-protected class Project_Group extends GroupToken {
+protected class Application_Group extends GroupToken {
 	
-	public Project_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Application_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Group getGrammarElement() {
-		return grammarAccess.getProjectAccess().getGroup();
+		return grammarAccess.getApplicationAccess().getGroup();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Project_ActivitiesAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Application_ActivitiesAssignment_2(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getProjectRule().getType().getClassifier())
+		if(getEObject().eClass() != grammarAccess.getApplicationRule().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
@@ -196,15 +196,15 @@ protected class Project_Group extends GroupToken {
 }
 
 // "Project"
-protected class Project_ProjectKeyword_0 extends KeywordToken  {
+protected class Application_ProjectKeyword_0 extends KeywordToken  {
 	
-	public Project_ProjectKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Application_ProjectKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getProjectAccess().getProjectKeyword_0();
+		return grammarAccess.getApplicationAccess().getProjectKeyword_0();
 	}
 
     @Override
@@ -217,21 +217,21 @@ protected class Project_ProjectKeyword_0 extends KeywordToken  {
 }
 
 // name=ID
-protected class Project_NameAssignment_1 extends AssignmentToken  {
+protected class Application_NameAssignment_1 extends AssignmentToken  {
 	
-	public Project_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Application_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getProjectAccess().getNameAssignment_1();
+		return grammarAccess.getApplicationAccess().getNameAssignment_1();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Project_ProjectKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Application_ProjectKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -240,9 +240,9 @@ protected class Project_NameAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getProjectAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getApplicationAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
 			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getProjectAccess().getNameIDTerminalRuleCall_1_0();
+			element = grammarAccess.getApplicationAccess().getNameIDTerminalRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -251,15 +251,15 @@ protected class Project_NameAssignment_1 extends AssignmentToken  {
 }
 
 // activities+=Activity+
-protected class Project_ActivitiesAssignment_2 extends AssignmentToken  {
+protected class Application_ActivitiesAssignment_2 extends AssignmentToken  {
 	
-	public Project_ActivitiesAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Application_ActivitiesAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getProjectAccess().getActivitiesAssignment_2();
+		return grammarAccess.getApplicationAccess().getActivitiesAssignment_2();
 	}
 
     @Override
@@ -278,7 +278,7 @@ protected class Project_ActivitiesAssignment_2 extends AssignmentToken  {
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getActivityRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getProjectAccess().getActivitiesActivityParserRuleCall_2_0(); 
+				element = grammarAccess.getApplicationAccess().getActivitiesActivityParserRuleCall_2_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -290,15 +290,15 @@ protected class Project_ActivitiesAssignment_2 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new Project_ActivitiesAssignment_2(lastRuleCallOrigin, next, actIndex, consumed);
-			case 1: return new Project_NameAssignment_1(lastRuleCallOrigin, next, actIndex, consumed);
+			case 0: return new Application_ActivitiesAssignment_2(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new Application_NameAssignment_1(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
 }
 
 
-/************ end Rule Project ****************/
+/************ end Rule Application ****************/
 
 
 /************ begin Rule Activity ****************

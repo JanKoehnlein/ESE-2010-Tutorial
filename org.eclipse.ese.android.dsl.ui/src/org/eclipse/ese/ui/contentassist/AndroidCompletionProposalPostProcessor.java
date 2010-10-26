@@ -20,7 +20,7 @@ public class AndroidCompletionProposalPostProcessor extends
 	@Override
 	public ICompletionProposal[] postProcess(ICompletionProposal[] proposals) {
 		List<ICompletionProposal> result =  Lists.newArrayList(Iterables.filter(Arrays.asList(proposals), new Predicate<ICompletionProposal>(){
-			@Override
+			
 			public boolean apply(ICompletionProposal input) {
 				if(input instanceof ConfigurableCompletionProposal){
 					ConfigurableCompletionProposal proposal = (ConfigurableCompletionProposal) input;

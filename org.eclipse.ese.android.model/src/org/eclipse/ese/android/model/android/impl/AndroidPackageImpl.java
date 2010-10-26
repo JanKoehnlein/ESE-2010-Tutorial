@@ -19,7 +19,6 @@ import org.eclipse.ese.android.model.android.AndroidPackage;
 import org.eclipse.ese.android.model.android.Application;
 import org.eclipse.ese.android.model.android.Button;
 import org.eclipse.ese.android.model.android.Link;
-import org.eclipse.ese.android.model.android.Project;
 import org.eclipse.ese.android.model.android.Spinner;
 import org.eclipse.ese.android.model.android.Text;
 import org.eclipse.ese.android.model.android.Widget;

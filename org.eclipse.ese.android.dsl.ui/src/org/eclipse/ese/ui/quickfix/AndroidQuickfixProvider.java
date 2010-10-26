@@ -30,7 +30,6 @@ public class AndroidQuickfixProvider extends DefaultQuickfixProvider {
 	public void removeLink(final Issue issue, IssueResolutionAcceptor acceptor) {
 		String typeName = issue.getData()[0];
 		acceptor.accept(issue, "Remove " + typeName, "Remove this "+ typeName +".", "delete.png", new ISemanticModification() {
-			@Override
 			public void apply(EObject element, IModificationContext context) throws Exception {
 				EcoreUtil.remove(element);
 			}

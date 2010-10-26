@@ -5,7 +5,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.ese.android.model.android.Activity;
 import org.eclipse.ese.android.model.android.AndroidPackage;
 import org.eclipse.ese.android.model.android.Link;
-import org.eclipse.ese.android.model.android.Project;
+import org.eclipse.ese.android.model.android.Application;
 import org.eclipse.xtext.resource.IReferenceDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
@@ -22,9 +22,9 @@ public class AndroidJavaValidator extends AbstractAndroidJavaValidator {
 
 	@Check
 	public void checkActivityIsContainedOrReference(Activity activity) {
-		if (activity.eContainer() instanceof Project) {
-			Project project = (Project) activity.eContainer();
-			if (project.getActivities().indexOf(activity) == 0)
+		if (activity.eContainer() instanceof Application) {
+			Application application = (Application) activity.eContainer();
+			if (application.getActivities().indexOf(activity) == 0)
 				return;
 		}
 		URI activityURI = EcoreUtil.getURI(activity);
@@ -50,10 +50,10 @@ public class AndroidJavaValidator extends AbstractAndroidJavaValidator {
 	public static final String CAPITALIZE = "org.eclipse.ese.android.validation.Captalize";
 	
 	@Check
-	public void checkProjectNameWithCapital(Project project) {
+	public void checkApplicationNameWithCapital(Application project) {
 		if (!Character.isUpperCase(project.getName().charAt(0))) {
 			warning("Name should start with a capital", project,
-					AndroidPackage.PROJECT__NAME, CAPITALIZE);
+					AndroidPackage.APPLICATION__NAME, CAPITALIZE);
 		}
 	}
 }

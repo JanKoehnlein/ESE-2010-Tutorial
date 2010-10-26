@@ -85,25 +85,25 @@ finally {
 
 
 
-// Entry rule entryRuleProject
-entryRuleProject 
+// Entry rule entryRuleApplication
+entryRuleApplication 
 :
-{ before(grammarAccess.getProjectRule()); }
-	 ruleProject
-{ after(grammarAccess.getProjectRule()); } 
+{ before(grammarAccess.getApplicationRule()); }
+	 ruleApplication
+{ after(grammarAccess.getApplicationRule()); } 
 	 EOF 
 ;
 
-// Rule Project
-ruleProject
+// Rule Application
+ruleApplication
     @init {
 		int stackSize = keepStackSize();
     }
 	:
 (
-{ before(grammarAccess.getProjectAccess().getGroup()); }
-(rule__Project__Group__0)
-{ after(grammarAccess.getProjectAccess().getGroup()); }
+{ before(grammarAccess.getApplicationAccess().getGroup()); }
+(rule__Application__Group__0)
+{ after(grammarAccess.getApplicationAccess().getGroup()); }
 )
 
 ;
@@ -316,9 +316,9 @@ rule__Entry__Alternatives
     }
 :
 (
-{ before(grammarAccess.getEntryAccess().getProjectParserRuleCall_0()); }
-	ruleProject
-{ after(grammarAccess.getEntryAccess().getProjectParserRuleCall_0()); }
+{ before(grammarAccess.getEntryAccess().getApplicationParserRuleCall_0()); }
+	ruleApplication
+{ after(grammarAccess.getEntryAccess().getApplicationParserRuleCall_0()); }
 )
 
     |(
@@ -390,29 +390,29 @@ finally {
 
 
 
-rule__Project__Group__0
+rule__Application__Group__0
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__Project__Group__0__Impl
-	rule__Project__Group__1
+	rule__Application__Group__0__Impl
+	rule__Application__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Project__Group__0__Impl
+rule__Application__Group__0__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getProjectAccess().getProjectKeyword_0()); }
+{ before(grammarAccess.getApplicationAccess().getProjectKeyword_0()); }
 
 	'Project' 
 
-{ after(grammarAccess.getProjectAccess().getProjectKeyword_0()); }
+{ after(grammarAccess.getApplicationAccess().getProjectKeyword_0()); }
 )
 
 ;
@@ -421,27 +421,27 @@ finally {
 }
 
 
-rule__Project__Group__1
+rule__Application__Group__1
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__Project__Group__1__Impl
-	rule__Project__Group__2
+	rule__Application__Group__1__Impl
+	rule__Application__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Project__Group__1__Impl
+rule__Application__Group__1__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getProjectAccess().getNameAssignment_1()); }
-(rule__Project__NameAssignment_1)
-{ after(grammarAccess.getProjectAccess().getNameAssignment_1()); }
+{ before(grammarAccess.getApplicationAccess().getNameAssignment_1()); }
+(rule__Application__NameAssignment_1)
+{ after(grammarAccess.getApplicationAccess().getNameAssignment_1()); }
 )
 
 ;
@@ -450,32 +450,32 @@ finally {
 }
 
 
-rule__Project__Group__2
+rule__Application__Group__2
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__Project__Group__2__Impl
+	rule__Application__Group__2__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Project__Group__2__Impl
+rule__Application__Group__2__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
 (
-{ before(grammarAccess.getProjectAccess().getActivitiesAssignment_2()); }
-(rule__Project__ActivitiesAssignment_2)
-{ after(grammarAccess.getProjectAccess().getActivitiesAssignment_2()); }
+{ before(grammarAccess.getApplicationAccess().getActivitiesAssignment_2()); }
+(rule__Application__ActivitiesAssignment_2)
+{ after(grammarAccess.getApplicationAccess().getActivitiesAssignment_2()); }
 )
 (
-{ before(grammarAccess.getProjectAccess().getActivitiesAssignment_2()); }
-(rule__Project__ActivitiesAssignment_2)*
-{ after(grammarAccess.getProjectAccess().getActivitiesAssignment_2()); }
+{ before(grammarAccess.getApplicationAccess().getActivitiesAssignment_2()); }
+(rule__Application__ActivitiesAssignment_2)*
+{ after(grammarAccess.getApplicationAccess().getActivitiesAssignment_2()); }
 )
 )
 
@@ -968,14 +968,14 @@ finally {
 
 
 
-rule__Project__NameAssignment_1
+rule__Application__NameAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getProjectAccess().getNameIDTerminalRuleCall_1_0()); }
-	RULE_ID{ after(grammarAccess.getProjectAccess().getNameIDTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getApplicationAccess().getNameIDTerminalRuleCall_1_0()); }
+	RULE_ID{ after(grammarAccess.getApplicationAccess().getNameIDTerminalRuleCall_1_0()); }
 )
 
 ;
@@ -983,14 +983,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Project__ActivitiesAssignment_2
+rule__Application__ActivitiesAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getProjectAccess().getActivitiesActivityParserRuleCall_2_0()); }
-	ruleActivity{ after(grammarAccess.getProjectAccess().getActivitiesActivityParserRuleCall_2_0()); }
+{ before(grammarAccess.getApplicationAccess().getActivitiesActivityParserRuleCall_2_0()); }
+	ruleActivity{ after(grammarAccess.getApplicationAccess().getActivitiesActivityParserRuleCall_2_0()); }
 )
 
 ;

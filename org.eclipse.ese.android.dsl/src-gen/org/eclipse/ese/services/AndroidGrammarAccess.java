@@ -20,25 +20,25 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	public class EntryElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Entry");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cProjectParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cApplicationParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cActivityParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Entry returns ecore::EObject:
-		//	Project | Activity;
+		//	Application | Activity;
 		public ParserRule getRule() { return rule; }
 
-		//Project | Activity
+		//Application | Activity
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//Project
-		public RuleCall getProjectParserRuleCall_0() { return cProjectParserRuleCall_0; }
+		//Application
+		public RuleCall getApplicationParserRuleCall_0() { return cApplicationParserRuleCall_0; }
 
 		//Activity
 		public RuleCall getActivityParserRuleCall_1() { return cActivityParserRuleCall_1; }
 	}
 
-	public class ProjectElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Project");
+	public class ApplicationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Application");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProjectKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -46,7 +46,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cActivitiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cActivitiesActivityParserRuleCall_2_0 = (RuleCall)cActivitiesAssignment_2.eContents().get(0);
 		
-		//Project:
+		//Application:
 		//	"Project" name=ID activities+=Activity+;
 		public ParserRule getRule() { return rule; }
 
@@ -271,7 +271,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private EntryElements pEntry;
-	private ProjectElements pProject;
+	private ApplicationElements pApplication;
 	private ActivityElements pActivity;
 	private WidgetElements pWidget;
 	private TextElements pText;
@@ -302,7 +302,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Entry returns ecore::EObject:
-	//	Project | Activity;
+	//	Application | Activity;
 	public EntryElements getEntryAccess() {
 		return (pEntry != null) ? pEntry : (pEntry = new EntryElements());
 	}
@@ -311,14 +311,14 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		return getEntryAccess().getRule();
 	}
 
-	//Project:
+	//Application:
 	//	"Project" name=ID activities+=Activity+;
-	public ProjectElements getProjectAccess() {
-		return (pProject != null) ? pProject : (pProject = new ProjectElements());
+	public ApplicationElements getApplicationAccess() {
+		return (pApplication != null) ? pApplication : (pApplication = new ApplicationElements());
 	}
 	
-	public ParserRule getProjectRule() {
-		return getProjectAccess().getRule();
+	public ParserRule getApplicationRule() {
+		return getApplicationAccess().getRule();
 	}
 
 	//Activity:
