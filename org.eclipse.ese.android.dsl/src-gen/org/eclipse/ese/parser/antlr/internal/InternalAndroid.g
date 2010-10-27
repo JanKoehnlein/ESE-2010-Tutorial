@@ -544,10 +544,12 @@ ruleLink returns [EObject current=null]
 	            associateNodeWithAstElement(currentNode, $current);
 	        }
         }
-	RULE_ID
-	{
-		createLeafNode(grammarAccess.getLinkAccess().getActivityActivityCrossReference_3_0(), "activity"); 
-	}
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getLinkAccess().getActivityActivityCrossReference_3_0(), currentNode); 
+	    }
+		ruleIdOrString		{ 
+	        currentNode = currentNode.getParent();
+	    }
 
 )
 ))

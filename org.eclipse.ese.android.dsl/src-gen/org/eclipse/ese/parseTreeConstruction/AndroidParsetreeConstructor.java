@@ -966,11 +966,11 @@ protected class Spinner_NameAssignment_1 extends AssignmentToken  {
 /************ begin Rule Link ****************
  *
  * Link:
- * 	"Link" name=IdOrString "->" activity=[Activity];
+ * 	"Link" name=IdOrString "->" activity=[Activity|IdOrString];
  *
  **/
 
-// "Link" name=IdOrString "->" activity=[Activity]
+// "Link" name=IdOrString "->" activity=[Activity|IdOrString]
 protected class Link_Group extends GroupToken {
 	
 	public Link_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1076,7 +1076,7 @@ protected class Link_HyphenMinusGreaterThanSignKeyword_2 extends KeywordToken  {
 
 }
 
-// activity=[Activity]
+// activity=[Activity|IdOrString]
 protected class Link_ActivityAssignment_3 extends AssignmentToken  {
 	
 	public Link_ActivityAssignment_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {

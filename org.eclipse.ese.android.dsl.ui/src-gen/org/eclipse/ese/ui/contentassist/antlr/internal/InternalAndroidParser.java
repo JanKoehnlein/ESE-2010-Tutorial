@@ -2759,25 +2759,28 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Link__ActivityAssignment_3
-    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1091:1: rule__Link__ActivityAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1091:1: rule__Link__ActivityAssignment_3 : ( ( ruleIdOrString ) ) ;
     public final void rule__Link__ActivityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1095:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1096:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1095:1: ( ( ( ruleIdOrString ) ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1096:1: ( ( ruleIdOrString ) )
             {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1096:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1097:1: ( RULE_ID )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1096:1: ( ( ruleIdOrString ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1097:1: ( ruleIdOrString )
             {
              before(grammarAccess.getLinkAccess().getActivityActivityCrossReference_3_0()); 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1098:1: ( RULE_ID )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1099:1: RULE_ID
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1098:1: ( ruleIdOrString )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1099:1: ruleIdOrString
             {
-             before(grammarAccess.getLinkAccess().getActivityActivityIDTerminalRuleCall_3_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Link__ActivityAssignment_32180); 
-             after(grammarAccess.getLinkAccess().getActivityActivityIDTerminalRuleCall_3_0_1()); 
+             before(grammarAccess.getLinkAccess().getActivityActivityIdOrStringParserRuleCall_3_0_1()); 
+            pushFollow(FollowSets000.FOLLOW_ruleIdOrString_in_rule__Link__ActivityAssignment_32180);
+            ruleIdOrString();
+            _fsp--;
+
+             after(grammarAccess.getLinkAccess().getActivityActivityIdOrStringParserRuleCall_3_0_1()); 
 
             }
 
@@ -2886,7 +2889,7 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Link__Group__1__Impl_in_rule__Link__Group__11736 = new BitSet(new long[]{0x0000000000080000L});
         public static final BitSet FOLLOW_rule__Link__Group__2_in_rule__Link__Group__11739 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Link__NameAssignment_1_in_rule__Link__Group__1__Impl1766 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Link__Group__2__Impl_in_rule__Link__Group__21796 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Link__Group__2__Impl_in_rule__Link__Group__21796 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_rule__Link__Group__3_in_rule__Link__Group__21799 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_19_in_rule__Link__Group__2__Impl1827 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Link__Group__3__Impl_in_rule__Link__Group__31858 = new BitSet(new long[]{0x0000000000000002L});
@@ -2899,7 +2902,7 @@ public class InternalAndroidParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleIdOrString_in_rule__Button__NameAssignment_12083 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleIdOrString_in_rule__Spinner__NameAssignment_12114 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleIdOrString_in_rule__Link__NameAssignment_12145 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Link__ActivityAssignment_32180 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleIdOrString_in_rule__Link__ActivityAssignment_32180 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

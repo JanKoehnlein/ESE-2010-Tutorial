@@ -218,13 +218,13 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cHyphenMinusGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cActivityAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final CrossReference cActivityActivityCrossReference_3_0 = (CrossReference)cActivityAssignment_3.eContents().get(0);
-		private final RuleCall cActivityActivityIDTerminalRuleCall_3_0_1 = (RuleCall)cActivityActivityCrossReference_3_0.eContents().get(1);
+		private final RuleCall cActivityActivityIdOrStringParserRuleCall_3_0_1 = (RuleCall)cActivityActivityCrossReference_3_0.eContents().get(1);
 		
 		//Link:
-		//	"Link" name=IdOrString "->" activity=[Activity];
+		//	"Link" name=IdOrString "->" activity=[Activity|IdOrString];
 		public ParserRule getRule() { return rule; }
 
-		//"Link" name=IdOrString "->" activity=[Activity]
+		//"Link" name=IdOrString "->" activity=[Activity|IdOrString]
 		public Group getGroup() { return cGroup; }
 
 		//"Link"
@@ -239,14 +239,14 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		//"->"
 		public Keyword getHyphenMinusGreaterThanSignKeyword_2() { return cHyphenMinusGreaterThanSignKeyword_2; }
 
-		//activity=[Activity]
+		//activity=[Activity|IdOrString]
 		public Assignment getActivityAssignment_3() { return cActivityAssignment_3; }
 
-		//[Activity]
+		//[Activity|IdOrString]
 		public CrossReference getActivityActivityCrossReference_3_0() { return cActivityActivityCrossReference_3_0; }
 
-		//ID
-		public RuleCall getActivityActivityIDTerminalRuleCall_3_0_1() { return cActivityActivityIDTerminalRuleCall_3_0_1; }
+		//IdOrString
+		public RuleCall getActivityActivityIdOrStringParserRuleCall_3_0_1() { return cActivityActivityIdOrStringParserRuleCall_3_0_1; }
 	}
 
 	public class IdOrStringElements extends AbstractParserRuleElementFinder {
@@ -372,7 +372,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Link:
-	//	"Link" name=IdOrString "->" activity=[Activity];
+	//	"Link" name=IdOrString "->" activity=[Activity|IdOrString];
 	public LinkElements getLinkAccess() {
 		return (pLink != null) ? pLink : (pLink = new LinkElements());
 	}

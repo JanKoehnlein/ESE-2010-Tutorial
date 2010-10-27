@@ -1096,8 +1096,8 @@ rule__Link__ActivityAssignment_3
 (
 { before(grammarAccess.getLinkAccess().getActivityActivityCrossReference_3_0()); }
 (
-{ before(grammarAccess.getLinkAccess().getActivityActivityIDTerminalRuleCall_3_0_1()); }
-	RULE_ID{ after(grammarAccess.getLinkAccess().getActivityActivityIDTerminalRuleCall_3_0_1()); }
+{ before(grammarAccess.getLinkAccess().getActivityActivityIdOrStringParserRuleCall_3_0_1()); }
+	ruleIdOrString{ after(grammarAccess.getLinkAccess().getActivityActivityIdOrStringParserRuleCall_3_0_1()); }
 )
 { after(grammarAccess.getLinkAccess().getActivityActivityCrossReference_3_0()); }
 )
