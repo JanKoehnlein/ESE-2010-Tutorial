@@ -3,6 +3,7 @@
 */
 package org.eclipse.ese.ui.labeling;
 
+import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.ui.label.DefaultDescriptionLabelProvider;
 
 /**
@@ -11,17 +12,18 @@ import org.eclipse.xtext.ui.label.DefaultDescriptionLabelProvider;
  * see http://www.eclipse.org/Xtext/documentation/latest/xtext.html#labelProvider
  */
 public class AndroidDescriptionLabelProvider extends DefaultDescriptionLabelProvider {
-
-/*
-	//Labels and icons can be computed like this:
 	
-	String text(IEObjectDescription ele) {
-	  return "my "+ele.getName();
+	@Override
+	public Object image(IEObjectDescription element) {
+		return AndroidLabelProvider.ICON_BASE_FOLDER + element.getEClass().getName() + ".gif";
 	}
-	 
-    String image(IEObjectDescription ele) {
-      return ele.getEClass().getName() + ".gif";
-    }	 
-*/
-
+	
+	public String getText(Object element) {
+		String text = super.getText(element);
+		if((text.startsWith("'") && text.endsWith("'"))
+				|| (text.startsWith("\"") && text.endsWith("\""))) {
+			return text.substring(1, text.length()-1);
+		}
+		return text;
+	}
 }

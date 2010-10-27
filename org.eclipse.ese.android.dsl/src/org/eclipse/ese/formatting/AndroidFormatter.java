@@ -21,12 +21,14 @@ public class AndroidFormatter extends AbstractDeclarativeFormatter {
 	@Override
 	protected void configureFormatting(FormattingConfig c) {
 		org.eclipse.ese.services.AndroidGrammarAccess f = (org.eclipse.ese.services.AndroidGrammarAccess) getGrammarAccess();
+		
 		for(Pair<Keyword, Keyword> pair: f.findKeywordPairs("{", "}")) {
 			c.setIndentation(pair.getFirst(), pair.getSecond());
 			c.setLinewrap(1).after(pair.getFirst());
 			c.setLinewrap(1).before(pair.getSecond());
 			c.setLinewrap(2).after(pair.getSecond());
 		}
+		
 		c.setLinewrap(2).after(f.getApplicationAccess().getNameAssignment_1());
 		c.setLinewrap(1).after(f.getWidgetRule());
 

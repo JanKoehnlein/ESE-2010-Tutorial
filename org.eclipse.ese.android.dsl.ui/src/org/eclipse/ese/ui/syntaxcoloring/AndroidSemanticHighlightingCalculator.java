@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.eclipse.ese.ui.syntaxcoloring;
 
 import org.eclipse.xtext.CrossReference;
@@ -11,15 +8,11 @@ import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightedPositionAcceptor;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator;
 
 /**
- * @author Dennis Huebner
- * 
+ * Highlights cross-references.
  */
 public class AndroidSemanticHighlightingCalculator implements
 		ISemanticHighlightingCalculator {
 
-	/**
-	 * {@inheritDoc}
-	 */
 	public void provideHighlightingFor(XtextResource resource,
 			IHighlightedPositionAcceptor acceptor) {
 		if (resource == null)

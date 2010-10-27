@@ -4,12 +4,12 @@
 }</template>
 	<template autoinsert="true" context="org.eclipse.ese.Android.Button"
 		deleted="false" description="Create a Button widget" enabled="true"
-		name="Button  " id="org.eclipse.ese.android.ButtonTemplate">
+		name="Button" id="org.eclipse.ese.android.ButtonTemplate">
 		Button ${name}
 	</template>
 	<template autoinsert="true" context="org.eclipse.ese.Android.Link"
 		deleted="false" description="Create a Link widget" enabled="true"
-		name="Link     " id="org.eclipse.ese.android.LinkTemplate">
+		name="Link" id="org.eclipse.ese.android.LinkTemplate">
 		Link ${name} -&gt; ${activity:CrossReference(Link.activity)}
 	</template>
 	<template autoinsert="true"
@@ -28,6 +28,7 @@
 	</template>
 	<template autoinsert="true" context="org.eclipse.ese.Android.Text"
 		deleted="false" description="Create a Text widget" enabled="true"
-		name="Text     " id="org.eclipse.ese.android.TextTemplate">
+		name="Text" id="org.eclipse.ese.android.TextTemplate">
 		Text ${name}
-	</template></templates>
+	</template>
+</templates>

@@ -22,7 +22,7 @@ import com.google.inject.Inject;
 public class AndroidProposalProvider extends AbstractAndroidProposalProvider {
 
 	@Inject
-	ILabelProvider labelProvider;
+	private ILabelProvider labelProvider;
 
 	public void complete_ID(EObject model, RuleCall ruleCall,
 			ContentAssistContext context, ICompletionProposalAcceptor acceptor) {

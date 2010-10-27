@@ -11,10 +11,11 @@ import com.google.inject.Inject;
 /**
  * Provides labels for a EObjects.
  * 
- * see
- * http://www.eclipse.org/Xtext/documentation/latest/xtext.html#labelProvider
+ * see http://www.eclipse.org/Xtext/documentation/latest/xtext.html#labelProvider
  */
 public class AndroidLabelProvider extends DefaultEObjectLabelProvider {
+
+	public static final String ICON_BASE_FOLDER = "elements/";
 
 	@Inject
 	public AndroidLabelProvider(AdapterFactoryLabelProvider delegate) {
@@ -23,10 +24,18 @@ public class AndroidLabelProvider extends DefaultEObjectLabelProvider {
 
 	protected Object doGetImage(Object element) {
 		if (element instanceof EObject) {
-			return ((EObject) element).eClass().getName() + ".gif";
-			
+			return ICON_BASE_FOLDER + ((EObject) element).eClass().getName() + ".gif";
 		}
 		return super.doGetImage(element);
 	}
-
+	
+	@Override
+	protected Object doGetText(Object element) {
+		String text = super.doGetText(element).toString();
+		if((text.startsWith("'") && text.endsWith("'"))
+				|| (text.startsWith("\"") && text.endsWith("\""))) {
+			return text.substring(1, text.length()-1);
+		}
+		return text;
+	}
 }

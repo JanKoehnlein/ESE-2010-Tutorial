@@ -27,7 +27,7 @@ Spinner:
 	'Spinner' name=IdOrString;
 
 Link:
-	'Link' name=IdOrString '->' activity=[Activity];
+	'Link' name=IdOrString '->' activity=[Activity|IdOrString];
     
 IdOrString:
 	ID | STRING;

@@ -3,12 +3,10 @@
  */
 package org.eclipse.ese.ui;
 
-import org.eclipse.ese.ui.contentassist.AndroidCompletionProposalPostProcessor;
 import org.eclipse.ese.ui.contentassist.AndroidTemplateProposalProvider;
 import org.eclipse.ese.ui.syntaxcoloring.AndroidHighlightingConfiguration;
 import org.eclipse.ese.ui.syntaxcoloring.AndroidSemanticHighlightingCalculator;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalPostProcessor;
 import org.eclipse.xtext.ui.editor.contentassist.ITemplateProposalProvider;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator;
@@ -19,11 +17,6 @@ import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculato
 public class AndroidUiModule extends org.eclipse.ese.ui.AbstractAndroidUiModule {
 	public AndroidUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
-	}
-
-	@Override
-	public Class<? extends ICompletionProposalPostProcessor> bindICompletionProposalPostProcessor() {
-		return AndroidCompletionProposalPostProcessor.class;
 	}
 
 	@Override
