@@ -9,6 +9,8 @@ import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculato
 
 /**
  * Highlights cross-references.
+ * 
+ * see http://www.eclipse.org/Xtext/documentation/latest/xtext.html#highlighting
  */
 public class AndroidSemanticHighlightingCalculator implements
 		ISemanticHighlightingCalculator {

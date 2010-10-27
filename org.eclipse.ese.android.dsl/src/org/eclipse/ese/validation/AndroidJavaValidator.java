@@ -26,9 +26,9 @@ public class AndroidJavaValidator extends AbstractAndroidJavaValidator {
 	public static final String CAPITALIZE = "org.eclipse.ese.android.validation.Captalize";
 	
 	@Check
-	public void checkApplicationNameWithCapital(Application project) {
-		if (!Character.isUpperCase(project.getName().charAt(0))) {
-			warning("Name should start with a capital", project,
+	public void checkApplicationNameWithCapital(Application application) {
+		if (!Character.isUpperCase(application.getName().charAt(0))) {
+			warning("Name should start with a capital", application,
 					AndroidPackage.APPLICATION__NAME, CAPITALIZE);
 		}
 	}

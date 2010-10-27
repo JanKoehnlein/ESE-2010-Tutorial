@@ -5,10 +5,8 @@ package org.eclipse.ese.ui.quickfix;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.ese.android.model.android.Application;
 import org.eclipse.ese.validation.AndroidJavaValidator;
-import org.eclipse.jface.text.BadLocationException;
-import org.eclipse.xtext.ui.editor.model.IXtextDocument;
-import org.eclipse.xtext.ui.editor.model.edit.IModification;
 import org.eclipse.xtext.ui.editor.model.edit.IModificationContext;
 import org.eclipse.xtext.ui.editor.model.edit.ISemanticModification;
 import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider;
@@ -25,11 +23,11 @@ public class AndroidQuickfixProvider extends DefaultQuickfixProvider {
 
 	@Fix(AndroidJavaValidator.CAPITALIZE)
 	public void capitalizeName(final Issue issue, IssueResolutionAcceptor acceptor) {
-		acceptor.accept(issue, "Capitalize name", "Capitalize the name.", "actions/upcase.gif", new IModification() {
-			public void apply(IModificationContext context) throws BadLocationException {
-				IXtextDocument xtextDocument = context.getXtextDocument();
-				String firstLetter = xtextDocument.get(issue.getOffset(), 1);
-				xtextDocument.replace(issue.getOffset(), 1, firstLetter.toUpperCase());
+		acceptor.accept(issue, "Capitalize name", "Capitalize the name.", "actions/upcase.gif", new ISemanticModification() {
+			public void apply(EObject element, IModificationContext context) {
+				Application application = (Application) element;
+				String name = application.getName();
+				application.setName(name.substring(0,1).toUpperCase() + name.substring(1));
 			}
 		});
 	}
