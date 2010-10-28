@@ -38,7 +38,6 @@ public class AndroidScopeProvider extends AbstractDeclarativeScopeProvider {
 			return getDelegate().getScope(context, ref);
 		final URI filteredElementURI = EcoreUtil.getURI(filteredElement);
 		return new FilteringScope(getDelegate().getScope(context, ref), new Predicate<IEObjectDescription>() {
-			@Override
 			public boolean apply(IEObjectDescription input) {
 				return !filteredElementURI.equals(input.getEObjectURI());
 			}
