@@ -197,34 +197,6 @@ finally {
 
 
 
-// Entry rule entryRuleButton
-entryRuleButton 
-:
-{ before(grammarAccess.getButtonRule()); }
-	 ruleButton
-{ after(grammarAccess.getButtonRule()); } 
-	 EOF 
-;
-
-// Rule Button
-ruleButton
-    @init {
-		int stackSize = keepStackSize();
-    }
-	:
-(
-{ before(grammarAccess.getButtonAccess().getGroup()); }
-(rule__Button__Group__0)
-{ after(grammarAccess.getButtonAccess().getGroup()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
 // Entry rule entryRuleSpinner
 entryRuleSpinner 
 :
@@ -344,21 +316,15 @@ rule__Widget__Alternatives
 )
 
     |(
-{ before(grammarAccess.getWidgetAccess().getButtonParserRuleCall_1()); }
-	ruleButton
-{ after(grammarAccess.getWidgetAccess().getButtonParserRuleCall_1()); }
-)
-
-    |(
-{ before(grammarAccess.getWidgetAccess().getSpinnerParserRuleCall_2()); }
+{ before(grammarAccess.getWidgetAccess().getSpinnerParserRuleCall_1()); }
 	ruleSpinner
-{ after(grammarAccess.getWidgetAccess().getSpinnerParserRuleCall_2()); }
+{ after(grammarAccess.getWidgetAccess().getSpinnerParserRuleCall_1()); }
 )
 
     |(
-{ before(grammarAccess.getWidgetAccess().getLinkParserRuleCall_3()); }
+{ before(grammarAccess.getWidgetAccess().getLinkParserRuleCall_2()); }
 	ruleLink
-{ after(grammarAccess.getWidgetAccess().getLinkParserRuleCall_3()); }
+{ after(grammarAccess.getWidgetAccess().getLinkParserRuleCall_2()); }
 )
 
 ;
@@ -714,69 +680,6 @@ finally {
 
 
 
-rule__Button__Group__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Button__Group__0__Impl
-	rule__Button__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Button__Group__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getButtonAccess().getButtonKeyword_0()); }
-
-	'Button' 
-
-{ after(grammarAccess.getButtonAccess().getButtonKeyword_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Button__Group__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Button__Group__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Button__Group__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getButtonAccess().getNameAssignment_1()); }
-(rule__Button__NameAssignment_1)
-{ after(grammarAccess.getButtonAccess().getNameAssignment_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
 rule__Spinner__Group__0
     @init {
 		int stackSize = keepStackSize();
@@ -1036,21 +939,6 @@ rule__Text__NameAssignment_1
 (
 { before(grammarAccess.getTextAccess().getNameIdOrStringParserRuleCall_1_0()); }
 	ruleIdOrString{ after(grammarAccess.getTextAccess().getNameIdOrStringParserRuleCall_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Button__NameAssignment_1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getButtonAccess().getNameIdOrStringParserRuleCall_1_0()); }
-	ruleIdOrString{ after(grammarAccess.getButtonAccess().getNameIdOrStringParserRuleCall_1_0()); }
 )
 
 ;

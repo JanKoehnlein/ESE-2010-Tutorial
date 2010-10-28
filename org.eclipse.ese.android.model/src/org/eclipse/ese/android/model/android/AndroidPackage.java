@@ -190,34 +190,6 @@ public interface AndroidPackage extends EPackage {
 	int TEXT_FEATURE_COUNT = WIDGET_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.ese.android.model.android.impl.ButtonImpl <em>Button</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.ese.android.model.android.impl.ButtonImpl
-	 * @see org.eclipse.ese.android.model.android.impl.AndroidPackageImpl#getButton()
-	 * @generated
-	 */
-	int BUTTON = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUTTON__NAME = WIDGET__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Button</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUTTON_FEATURE_COUNT = WIDGET_FEATURE_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.ese.android.model.android.impl.SpinnerImpl <em>Spinner</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -225,7 +197,7 @@ public interface AndroidPackage extends EPackage {
 	 * @see org.eclipse.ese.android.model.android.impl.AndroidPackageImpl#getSpinner()
 	 * @generated
 	 */
-	int SPINNER = 5;
+	int SPINNER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -253,7 +225,7 @@ public interface AndroidPackage extends EPackage {
 	 * @see org.eclipse.ese.android.model.android.impl.AndroidPackageImpl#getLink()
 	 * @generated
 	 */
-	int LINK = 6;
+	int LINK = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -377,16 +349,6 @@ public interface AndroidPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getText();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.ese.android.model.android.Button <em>Button</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Button</em>'.
-	 * @see org.eclipse.ese.android.model.android.Button
-	 * @generated
-	 */
-	EClass getButton();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.ese.android.model.android.Spinner <em>Spinner</em>}'.
@@ -520,16 +482,6 @@ public interface AndroidPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEXT = eINSTANCE.getText();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.ese.android.model.android.impl.ButtonImpl <em>Button</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.ese.android.model.android.impl.ButtonImpl
-		 * @see org.eclipse.ese.android.model.android.impl.AndroidPackageImpl#getButton()
-		 * @generated
-		 */
-		EClass BUTTON = eINSTANCE.getButton();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.ese.android.model.android.impl.SpinnerImpl <em>Spinner</em>}' class.

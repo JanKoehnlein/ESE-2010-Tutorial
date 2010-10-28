@@ -113,28 +113,24 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Widget");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cTextParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cButtonParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cSpinnerParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cLinkParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cSpinnerParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cLinkParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Widget:
-		//	Text | Button | Spinner | Link;
+		//	Text | Spinner | Link;
 		public ParserRule getRule() { return rule; }
 
-		//Text | Button | Spinner | Link
+		//Text | Spinner | Link
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Text
 		public RuleCall getTextParserRuleCall_0() { return cTextParserRuleCall_0; }
 
-		//Button
-		public RuleCall getButtonParserRuleCall_1() { return cButtonParserRuleCall_1; }
-
 		//Spinner
-		public RuleCall getSpinnerParserRuleCall_2() { return cSpinnerParserRuleCall_2; }
+		public RuleCall getSpinnerParserRuleCall_1() { return cSpinnerParserRuleCall_1; }
 
 		//Link
-		public RuleCall getLinkParserRuleCall_3() { return cLinkParserRuleCall_3; }
+		public RuleCall getLinkParserRuleCall_2() { return cLinkParserRuleCall_2; }
 	}
 
 	public class TextElements extends AbstractParserRuleElementFinder {
@@ -153,30 +149,6 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"Text"
 		public Keyword getTextKeyword_0() { return cTextKeyword_0; }
-
-		//name=IdOrString
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//IdOrString
-		public RuleCall getNameIdOrStringParserRuleCall_1_0() { return cNameIdOrStringParserRuleCall_1_0; }
-	}
-
-	public class ButtonElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Button");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cButtonKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIdOrStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		
-		//Button:
-		//	"Button" name=IdOrString;
-		public ParserRule getRule() { return rule; }
-
-		//"Button" name=IdOrString
-		public Group getGroup() { return cGroup; }
-
-		//"Button"
-		public Keyword getButtonKeyword_0() { return cButtonKeyword_0; }
 
 		//name=IdOrString
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -275,7 +247,6 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	private ActivityElements pActivity;
 	private WidgetElements pWidget;
 	private TextElements pText;
-	private ButtonElements pButton;
 	private SpinnerElements pSpinner;
 	private LinkElements pLink;
 	private IdOrStringElements pIdOrString;
@@ -332,7 +303,7 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Widget:
-	//	Text | Button | Spinner | Link;
+	//	Text | Spinner | Link;
 	public WidgetElements getWidgetAccess() {
 		return (pWidget != null) ? pWidget : (pWidget = new WidgetElements());
 	}
@@ -349,16 +320,6 @@ public class AndroidGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getTextRule() {
 		return getTextAccess().getRule();
-	}
-
-	//Button:
-	//	"Button" name=IdOrString;
-	public ButtonElements getButtonAccess() {
-		return (pButton != null) ? pButton : (pButton = new ButtonElements());
-	}
-	
-	public ParserRule getButtonRule() {
-		return getButtonAccess().getRule();
 	}
 
 	//Spinner:

@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public class InternalAndroidLexer extends Lexer {
     public static final int RULE_ID=4;
     public static final int RULE_ANY_OTHER=10;
-    public static final int Tokens=20;
     public static final int EOF=-1;
     public static final int RULE_SL_COMMENT=8;
+    public static final int Tokens=19;
     public static final int RULE_ML_COMMENT=7;
     public static final int RULE_STRING=5;
     public static final int RULE_INT=6;
@@ -29,7 +29,6 @@ public class InternalAndroidLexer extends Lexer {
     public static final int T16=16;
     public static final int T17=17;
     public static final int T18=18;
-    public static final int T19=19;
     public InternalAndroidLexer() {;} 
     public InternalAndroidLexer(CharStream input) {
         super(input);
@@ -133,10 +132,10 @@ public class InternalAndroidLexer extends Lexer {
     public final void mT16() throws RecognitionException {
         try {
             int _type = T16;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:15:5: ( 'Button' )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:15:7: 'Button'
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:15:5: ( 'Spinner' )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:15:7: 'Spinner'
             {
-            match("Button"); 
+            match("Spinner"); 
 
 
             }
@@ -152,10 +151,10 @@ public class InternalAndroidLexer extends Lexer {
     public final void mT17() throws RecognitionException {
         try {
             int _type = T17;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:16:5: ( 'Spinner' )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:16:7: 'Spinner'
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:16:5: ( 'Link' )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:16:7: 'Link'
             {
-            match("Spinner"); 
+            match("Link"); 
 
 
             }
@@ -171,27 +170,8 @@ public class InternalAndroidLexer extends Lexer {
     public final void mT18() throws RecognitionException {
         try {
             int _type = T18;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:17:5: ( 'Link' )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:17:7: 'Link'
-            {
-            match("Link"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T18
-
-    // $ANTLR start T19
-    public final void mT19() throws RecognitionException {
-        try {
-            int _type = T19;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:18:5: ( '->' )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:18:7: '->'
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:17:5: ( '->' )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:17:7: '->'
             {
             match("->"); 
 
@@ -203,16 +183,16 @@ public class InternalAndroidLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end T19
+    // $ANTLR end T18
 
     // $ANTLR start RULE_ID
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1111:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1111:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:999:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:999:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1111:11: ( '^' )?
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:999:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -221,7 +201,7 @@ public class InternalAndroidLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1111:11: '^'
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:999:11: '^'
                     {
                     match('^'); 
 
@@ -240,7 +220,7 @@ public class InternalAndroidLexer extends Lexer {
                 recover(mse);    throw mse;
             }
 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1111:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:999:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -288,10 +268,10 @@ public class InternalAndroidLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1113:10: ( ( '0' .. '9' )+ )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1113:12: ( '0' .. '9' )+
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1001:10: ( ( '0' .. '9' )+ )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1001:12: ( '0' .. '9' )+
             {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1113:12: ( '0' .. '9' )+
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1001:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -305,7 +285,7 @@ public class InternalAndroidLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1113:13: '0' .. '9'
+            	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1001:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -335,10 +315,10 @@ public class InternalAndroidLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -350,16 +330,16 @@ public class InternalAndroidLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1115:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 6, 0, input);
+                    new NoViableAltException("1003:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 6, 0, input);
 
                 throw nvae;
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -375,7 +355,7 @@ public class InternalAndroidLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -392,7 +372,7 @@ public class InternalAndroidLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:62: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:62: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -418,10 +398,10 @@ public class InternalAndroidLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -437,7 +417,7 @@ public class InternalAndroidLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -454,7 +434,7 @@ public class InternalAndroidLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1115:129: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1003:129: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -496,12 +476,12 @@ public class InternalAndroidLexer extends Lexer {
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1117:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1117:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1005:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1005:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1117:24: ( options {greedy=false; } : . )*
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1005:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -526,7 +506,7 @@ public class InternalAndroidLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1117:52: .
+            	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1005:52: .
             	    {
             	    matchAny(); 
 
@@ -554,12 +534,12 @@ public class InternalAndroidLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1119:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1119:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1007:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1007:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1119:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1007:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -572,7 +552,7 @@ public class InternalAndroidLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1119:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1007:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -593,7 +573,7 @@ public class InternalAndroidLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1119:40: ( ( '\\r' )? '\\n' )?
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1007:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -602,9 +582,9 @@ public class InternalAndroidLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1119:41: ( '\\r' )? '\\n'
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1007:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1119:41: ( '\\r' )?
+                    // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1007:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -613,7 +593,7 @@ public class InternalAndroidLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1119:41: '\\r'
+                            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1007:41: '\\r'
                             {
                             match('\r'); 
 
@@ -643,10 +623,10 @@ public class InternalAndroidLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1121:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1121:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1009:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1009:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1121:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1009:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -699,8 +679,8 @@ public class InternalAndroidLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1123:16: ( . )
-            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1123:18: .
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1011:16: ( . )
+            // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1011:18: .
             {
             matchAny(); 
 
@@ -714,8 +694,8 @@ public class InternalAndroidLexer extends Lexer {
     // $ANTLR end RULE_ANY_OTHER
 
     public void mTokens() throws RecognitionException {
-        // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:8: ( T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=16;
+        // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:8: ( T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=15;
         int LA12_0 = input.LA(1);
 
         if ( (LA12_0=='A') ) {
@@ -730,44 +710,41 @@ public class InternalAndroidLexer extends Lexer {
         else if ( (LA12_0=='T') ) {
             alt12 = mTokensHelper004();
         }
-        else if ( (LA12_0=='B') ) {
+        else if ( (LA12_0=='S') ) {
             alt12 = mTokensHelper005();
         }
-        else if ( (LA12_0=='S') ) {
+        else if ( (LA12_0=='L') ) {
             alt12 = mTokensHelper006();
         }
-        else if ( (LA12_0=='L') ) {
+        else if ( (LA12_0=='-') ) {
             alt12 = mTokensHelper007();
         }
-        else if ( (LA12_0=='-') ) {
+        else if ( (LA12_0=='^') ) {
             alt12 = mTokensHelper008();
         }
-        else if ( (LA12_0=='^') ) {
+        else if ( ((LA12_0>='B' && LA12_0<='K')||(LA12_0>='M' && LA12_0<='R')||(LA12_0>='U' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {
             alt12 = mTokensHelper009();
         }
-        else if ( ((LA12_0>='C' && LA12_0<='K')||(LA12_0>='M' && LA12_0<='R')||(LA12_0>='U' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {
+        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {
             alt12 = mTokensHelper010();
         }
-        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {
+        else if ( (LA12_0=='\"') ) {
             alt12 = mTokensHelper011();
         }
-        else if ( (LA12_0=='\"') ) {
+        else if ( (LA12_0=='\'') ) {
             alt12 = mTokensHelper012();
         }
-        else if ( (LA12_0=='\'') ) {
+        else if ( (LA12_0=='/') ) {
             alt12 = mTokensHelper013();
         }
-        else if ( (LA12_0=='/') ) {
+        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {
             alt12 = mTokensHelper014();
         }
-        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {
+        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<=',')||LA12_0=='.'||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFE')) ) {
             alt12 = mTokensHelper015();
         }
-        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<=',')||LA12_0=='.'||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFE')) ) {
-            alt12 = mTokensHelper016();
-        }
         else {
-            alt12 = mTokensHelper017();
+            alt12 = mTokensHelper016();
         }
         switch (alt12) {
             case 1 :
@@ -827,56 +804,49 @@ public class InternalAndroidLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:42: T19
-                {
-                mT19(); 
-
-                }
-                break;
-            case 10 :
-                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:46: RULE_ID
+                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:42: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 11 :
-                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:54: RULE_INT
+            case 10 :
+                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:50: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 12 :
-                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:63: RULE_STRING
+            case 11 :
+                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:59: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 13 :
-                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:75: RULE_ML_COMMENT
+            case 12 :
+                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:71: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 14 :
-                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:91: RULE_SL_COMMENT
+            case 13 :
+                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:87: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 15 :
-                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:107: RULE_WS
+            case 14 :
+                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:103: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 16 :
-                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:115: RULE_ANY_OTHER
+            case 15 :
+                // ../org.eclipse.ese.android.dsl.ui/src-gen/org/eclipse/ese/ui/contentassist/antlr/internal/InternalAndroid.g:1:111: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -888,118 +858,118 @@ public class InternalAndroidLexer extends Lexer {
     }
     private int mTokensHelper001() throws RecognitionException {
         switch ( input.LA(2) ) {
-        case 'c':
-            {
-            int LA12_17 = input.LA(3);
-
-            if ( (LA12_17=='t') ) {
-                int LA12_32 = input.LA(4);
-
-                if ( (LA12_32=='i') ) {
-                    int LA12_38 = input.LA(5);
-
-                    if ( (LA12_38=='v') ) {
-                        int LA12_44 = input.LA(6);
-
-                        if ( (LA12_44=='i') ) {
-                            int LA12_50 = input.LA(7);
-
-                            if ( (LA12_50=='t') ) {
-                                int LA12_54 = input.LA(8);
-
-                                if ( (LA12_54=='y') ) {
-                                    int LA12_58 = input.LA(9);
-
-                                    if ( ((LA12_58>='0' && LA12_58<='9')||(LA12_58>='A' && LA12_58<='Z')||LA12_58=='_'||(LA12_58>='a' && LA12_58<='z')) ) {
-                                        return 10;
-                                    }
-                                    else {
-                                        return 2;}
-                                }
-                                else {
-                                    return 10;}
-                            }
-                            else {
-                                return 10;}
-                        }
-                        else {
-                            return 10;}
-                    }
-                    else {
-                        return 10;}
-                }
-                else {
-                    return 10;}
-            }
-            else {
-                return 10;}
-            }
         case 'p':
             {
-            int LA12_18 = input.LA(3);
+            int LA12_16 = input.LA(3);
 
-            if ( (LA12_18=='p') ) {
-                int LA12_33 = input.LA(4);
+            if ( (LA12_16=='p') ) {
+                int LA12_30 = input.LA(4);
 
-                if ( (LA12_33=='l') ) {
-                    int LA12_39 = input.LA(5);
+                if ( (LA12_30=='l') ) {
+                    int LA12_35 = input.LA(5);
 
-                    if ( (LA12_39=='i') ) {
-                        int LA12_45 = input.LA(6);
+                    if ( (LA12_35=='i') ) {
+                        int LA12_40 = input.LA(6);
 
-                        if ( (LA12_45=='c') ) {
-                            int LA12_51 = input.LA(7);
+                        if ( (LA12_40=='c') ) {
+                            int LA12_45 = input.LA(7);
 
-                            if ( (LA12_51=='a') ) {
-                                int LA12_55 = input.LA(8);
+                            if ( (LA12_45=='a') ) {
+                                int LA12_48 = input.LA(8);
 
-                                if ( (LA12_55=='t') ) {
-                                    int LA12_59 = input.LA(9);
+                                if ( (LA12_48=='t') ) {
+                                    int LA12_51 = input.LA(9);
 
-                                    if ( (LA12_59=='i') ) {
-                                        int LA12_62 = input.LA(10);
+                                    if ( (LA12_51=='i') ) {
+                                        int LA12_54 = input.LA(10);
 
-                                        if ( (LA12_62=='o') ) {
-                                            int LA12_63 = input.LA(11);
+                                        if ( (LA12_54=='o') ) {
+                                            int LA12_56 = input.LA(11);
 
-                                            if ( (LA12_63=='n') ) {
-                                                int LA12_64 = input.LA(12);
+                                            if ( (LA12_56=='n') ) {
+                                                int LA12_57 = input.LA(12);
 
-                                                if ( ((LA12_64>='0' && LA12_64<='9')||(LA12_64>='A' && LA12_64<='Z')||LA12_64=='_'||(LA12_64>='a' && LA12_64<='z')) ) {
-                                                    return 10;
+                                                if ( ((LA12_57>='0' && LA12_57<='9')||(LA12_57>='A' && LA12_57<='Z')||LA12_57=='_'||(LA12_57>='a' && LA12_57<='z')) ) {
+                                                    return 9;
                                                 }
                                                 else {
                                                     return 1;}
                                             }
                                             else {
-                                                return 10;}
+                                                return 9;}
                                         }
                                         else {
-                                            return 10;}
+                                            return 9;}
                                     }
                                     else {
-                                        return 10;}
+                                        return 9;}
                                 }
                                 else {
-                                    return 10;}
+                                    return 9;}
                             }
                             else {
-                                return 10;}
+                                return 9;}
                         }
                         else {
-                            return 10;}
+                            return 9;}
                     }
                     else {
-                        return 10;}
+                        return 9;}
                 }
                 else {
-                    return 10;}
+                    return 9;}
             }
             else {
-                return 10;}
+                return 9;}
+            }
+        case 'c':
+            {
+            int LA12_17 = input.LA(3);
+
+            if ( (LA12_17=='t') ) {
+                int LA12_31 = input.LA(4);
+
+                if ( (LA12_31=='i') ) {
+                    int LA12_36 = input.LA(5);
+
+                    if ( (LA12_36=='v') ) {
+                        int LA12_41 = input.LA(6);
+
+                        if ( (LA12_41=='i') ) {
+                            int LA12_46 = input.LA(7);
+
+                            if ( (LA12_46=='t') ) {
+                                int LA12_49 = input.LA(8);
+
+                                if ( (LA12_49=='y') ) {
+                                    int LA12_52 = input.LA(9);
+
+                                    if ( ((LA12_52>='0' && LA12_52<='9')||(LA12_52>='A' && LA12_52<='Z')||LA12_52=='_'||(LA12_52>='a' && LA12_52<='z')) ) {
+                                        return 9;
+                                    }
+                                    else {
+                                        return 2;}
+                                }
+                                else {
+                                    return 9;}
+                            }
+                            else {
+                                return 9;}
+                        }
+                        else {
+                            return 9;}
+                    }
+                    else {
+                        return 9;}
+                }
+                else {
+                    return 9;}
+            }
+            else {
+                return 9;}
             }
         default:
-            return 10;}
+            return 9;}
 
     }
 
@@ -1015,162 +985,126 @@ public class InternalAndroidLexer extends Lexer {
         int LA12_4 = input.LA(2);
 
         if ( (LA12_4=='e') ) {
-            int LA12_22 = input.LA(3);
+            int LA12_21 = input.LA(3);
 
-            if ( (LA12_22=='x') ) {
-                int LA12_34 = input.LA(4);
+            if ( (LA12_21=='x') ) {
+                int LA12_32 = input.LA(4);
 
-                if ( (LA12_34=='t') ) {
-                    int LA12_40 = input.LA(5);
+                if ( (LA12_32=='t') ) {
+                    int LA12_37 = input.LA(5);
 
-                    if ( ((LA12_40>='0' && LA12_40<='9')||(LA12_40>='A' && LA12_40<='Z')||LA12_40=='_'||(LA12_40>='a' && LA12_40<='z')) ) {
-                        return 10;
+                    if ( ((LA12_37>='0' && LA12_37<='9')||(LA12_37>='A' && LA12_37<='Z')||LA12_37=='_'||(LA12_37>='a' && LA12_37<='z')) ) {
+                        return 9;
                     }
                     else {
                         return 5;}
                 }
                 else {
-                    return 10;}
+                    return 9;}
             }
             else {
-                return 10;}
+                return 9;}
         }
         else {
-            return 10;}
+            return 9;}
     }
 
     private int mTokensHelper005() throws RecognitionException {
         int LA12_5 = input.LA(2);
 
-        if ( (LA12_5=='u') ) {
-            int LA12_23 = input.LA(3);
+        if ( (LA12_5=='p') ) {
+            int LA12_22 = input.LA(3);
 
-            if ( (LA12_23=='t') ) {
-                int LA12_35 = input.LA(4);
+            if ( (LA12_22=='i') ) {
+                int LA12_33 = input.LA(4);
 
-                if ( (LA12_35=='t') ) {
-                    int LA12_41 = input.LA(5);
+                if ( (LA12_33=='n') ) {
+                    int LA12_38 = input.LA(5);
 
-                    if ( (LA12_41=='o') ) {
-                        int LA12_47 = input.LA(6);
+                    if ( (LA12_38=='n') ) {
+                        int LA12_43 = input.LA(6);
 
-                        if ( (LA12_47=='n') ) {
-                            int LA12_52 = input.LA(7);
+                        if ( (LA12_43=='e') ) {
+                            int LA12_47 = input.LA(7);
 
-                            if ( ((LA12_52>='0' && LA12_52<='9')||(LA12_52>='A' && LA12_52<='Z')||LA12_52=='_'||(LA12_52>='a' && LA12_52<='z')) ) {
-                                return 10;
+                            if ( (LA12_47=='r') ) {
+                                int LA12_50 = input.LA(8);
+
+                                if ( ((LA12_50>='0' && LA12_50<='9')||(LA12_50>='A' && LA12_50<='Z')||LA12_50=='_'||(LA12_50>='a' && LA12_50<='z')) ) {
+                                    return 9;
+                                }
+                                else {
+                                    return 6;}
                             }
                             else {
-                                return 6;}
+                                return 9;}
                         }
                         else {
-                            return 10;}
+                            return 9;}
                     }
                     else {
-                        return 10;}
+                        return 9;}
                 }
                 else {
-                    return 10;}
+                    return 9;}
             }
             else {
-                return 10;}
+                return 9;}
         }
         else {
-            return 10;}
+            return 9;}
     }
 
     private int mTokensHelper006() throws RecognitionException {
         int LA12_6 = input.LA(2);
 
-        if ( (LA12_6=='p') ) {
-            int LA12_24 = input.LA(3);
+        if ( (LA12_6=='i') ) {
+            int LA12_23 = input.LA(3);
 
-            if ( (LA12_24=='i') ) {
-                int LA12_36 = input.LA(4);
+            if ( (LA12_23=='n') ) {
+                int LA12_34 = input.LA(4);
 
-                if ( (LA12_36=='n') ) {
-                    int LA12_42 = input.LA(5);
+                if ( (LA12_34=='k') ) {
+                    int LA12_39 = input.LA(5);
 
-                    if ( (LA12_42=='n') ) {
-                        int LA12_48 = input.LA(6);
-
-                        if ( (LA12_48=='e') ) {
-                            int LA12_53 = input.LA(7);
-
-                            if ( (LA12_53=='r') ) {
-                                int LA12_57 = input.LA(8);
-
-                                if ( ((LA12_57>='0' && LA12_57<='9')||(LA12_57>='A' && LA12_57<='Z')||LA12_57=='_'||(LA12_57>='a' && LA12_57<='z')) ) {
-                                    return 10;
-                                }
-                                else {
-                                    return 7;}
-                            }
-                            else {
-                                return 10;}
-                        }
-                        else {
-                            return 10;}
+                    if ( ((LA12_39>='0' && LA12_39<='9')||(LA12_39>='A' && LA12_39<='Z')||LA12_39=='_'||(LA12_39>='a' && LA12_39<='z')) ) {
+                        return 9;
                     }
                     else {
-                        return 10;}
+                        return 7;}
                 }
                 else {
-                    return 10;}
+                    return 9;}
             }
             else {
-                return 10;}
+                return 9;}
         }
         else {
-            return 10;}
+            return 9;}
     }
 
     private int mTokensHelper007() throws RecognitionException {
         int LA12_7 = input.LA(2);
 
-        if ( (LA12_7=='i') ) {
-            int LA12_25 = input.LA(3);
-
-            if ( (LA12_25=='n') ) {
-                int LA12_37 = input.LA(4);
-
-                if ( (LA12_37=='k') ) {
-                    int LA12_43 = input.LA(5);
-
-                    if ( ((LA12_43>='0' && LA12_43<='9')||(LA12_43>='A' && LA12_43<='Z')||LA12_43=='_'||(LA12_43>='a' && LA12_43<='z')) ) {
-                        return 10;
-                    }
-                    else {
-                        return 8;}
-                }
-                else {
-                    return 10;}
-            }
-            else {
-                return 10;}
+        if ( (LA12_7=='>') ) {
+            return 8;
         }
         else {
-            return 10;}
+            return 15;}
     }
 
     private int mTokensHelper008() throws RecognitionException {
         int LA12_8 = input.LA(2);
 
-        if ( (LA12_8=='>') ) {
+        if ( ((LA12_8>='A' && LA12_8<='Z')||LA12_8=='_'||(LA12_8>='a' && LA12_8<='z')) ) {
             return 9;
         }
         else {
-            return 16;}
+            return 15;}
     }
 
     private int mTokensHelper009() throws RecognitionException {
-        int LA12_9 = input.LA(2);
-
-        if ( ((LA12_9>='A' && LA12_9<='Z')||LA12_9=='_'||(LA12_9>='a' && LA12_9<='z')) ) {
-            return 10;
-        }
-        else {
-            return 16;}
+        return 9;
     }
 
     private int mTokensHelper010() throws RecognitionException {
@@ -1178,42 +1112,42 @@ public class InternalAndroidLexer extends Lexer {
     }
 
     private int mTokensHelper011() throws RecognitionException {
-        return 11;
+        int LA12_11 = input.LA(2);
+
+        if ( ((LA12_11>='\u0000' && LA12_11<='\uFFFE')) ) {
+            return 11;
+        }
+        else {
+            return 15;}
     }
 
     private int mTokensHelper012() throws RecognitionException {
         int LA12_12 = input.LA(2);
 
         if ( ((LA12_12>='\u0000' && LA12_12<='\uFFFE')) ) {
-            return 12;
+            return 11;
         }
         else {
-            return 16;}
+            return 15;}
     }
 
     private int mTokensHelper013() throws RecognitionException {
-        int LA12_13 = input.LA(2);
-
-        if ( ((LA12_13>='\u0000' && LA12_13<='\uFFFE')) ) {
-            return 12;
-        }
-        else {
-            return 16;}
-    }
-
-    private int mTokensHelper014() throws RecognitionException {
         switch ( input.LA(2) ) {
-        case '*':
+        case '/':
             {
             return 13;
             }
-        case '/':
+        case '*':
             {
-            return 14;
+            return 12;
             }
         default:
-            return 16;}
+            return 15;}
 
+    }
+
+    private int mTokensHelper014() throws RecognitionException {
+        return 14;
     }
 
     private int mTokensHelper015() throws RecognitionException {
@@ -1221,12 +1155,8 @@ public class InternalAndroidLexer extends Lexer {
     }
 
     private int mTokensHelper016() throws RecognitionException {
-        return 16;
-    }
-
-    private int mTokensHelper017() throws RecognitionException {
         NoViableAltException nvae =
-            new NoViableAltException("1:1: Tokens : ( T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );", 12, 0, input);
+            new NoViableAltException("1:1: Tokens : ( T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );", 12, 0, input);
 
         throw nvae;
     }

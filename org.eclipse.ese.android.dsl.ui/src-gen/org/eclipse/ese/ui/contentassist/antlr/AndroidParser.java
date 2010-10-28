@@ -43,7 +43,6 @@ public class AndroidParser extends AbstractContentAssistParser {
 					put(grammarAccess.getApplicationAccess().getGroup(), "rule__Application__Group__0");
 					put(grammarAccess.getActivityAccess().getGroup(), "rule__Activity__Group__0");
 					put(grammarAccess.getTextAccess().getGroup(), "rule__Text__Group__0");
-					put(grammarAccess.getButtonAccess().getGroup(), "rule__Button__Group__0");
 					put(grammarAccess.getSpinnerAccess().getGroup(), "rule__Spinner__Group__0");
 					put(grammarAccess.getLinkAccess().getGroup(), "rule__Link__Group__0");
 					put(grammarAccess.getApplicationAccess().getNameAssignment_1(), "rule__Application__NameAssignment_1");
@@ -51,7 +50,6 @@ public class AndroidParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActivityAccess().getNameAssignment_1(), "rule__Activity__NameAssignment_1");
 					put(grammarAccess.getActivityAccess().getWidgetsAssignment_3(), "rule__Activity__WidgetsAssignment_3");
 					put(grammarAccess.getTextAccess().getNameAssignment_1(), "rule__Text__NameAssignment_1");
-					put(grammarAccess.getButtonAccess().getNameAssignment_1(), "rule__Button__NameAssignment_1");
 					put(grammarAccess.getSpinnerAccess().getNameAssignment_1(), "rule__Spinner__NameAssignment_1");
 					put(grammarAccess.getLinkAccess().getNameAssignment_1(), "rule__Link__NameAssignment_1");
 					put(grammarAccess.getLinkAccess().getActivityAssignment_3(), "rule__Link__ActivityAssignment_3");

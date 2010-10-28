@@ -17,7 +17,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Widget"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//Widget"/>
   <eClassifiers xsi:type="ecore:EClass" name="Spinner" eSuperTypes="#//Widget"/>
   <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//Widget">
     <eStructuralFeatures xsi:type="ecore:EReference" name="activity" eType="#//Activity"/>

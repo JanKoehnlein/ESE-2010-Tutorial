@@ -88,10 +88,6 @@ public class AndroidAdapterFactory extends AdapterFactoryImpl {
 				return createTextAdapter();
 			}
 			@Override
-			public Adapter caseButton(Button object) {
-				return createButtonAdapter();
-			}
-			@Override
 			public Adapter caseSpinner(Spinner object) {
 				return createSpinnerAdapter();
 			}
@@ -172,20 +168,6 @@ public class AndroidAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTextAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.ese.android.model.android.Button <em>Button</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.ese.android.model.android.Button
-	 * @generated
-	 */
-	public Adapter createButtonAdapter() {
 		return null;
 	}
 

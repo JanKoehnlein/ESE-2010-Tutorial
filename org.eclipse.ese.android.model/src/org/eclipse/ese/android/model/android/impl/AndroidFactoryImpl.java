@@ -63,7 +63,6 @@ public class AndroidFactoryImpl extends EFactoryImpl implements AndroidFactory {
 			case AndroidPackage.APPLICATION: return createApplication();
 			case AndroidPackage.ACTIVITY: return createActivity();
 			case AndroidPackage.TEXT: return createText();
-			case AndroidPackage.BUTTON: return createButton();
 			case AndroidPackage.SPINNER: return createSpinner();
 			case AndroidPackage.LINK: return createLink();
 			default:
@@ -99,16 +98,6 @@ public class AndroidFactoryImpl extends EFactoryImpl implements AndroidFactory {
 	public Text createText() {
 		TextImpl text = new TextImpl();
 		return text;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Button createButton() {
-		ButtonImpl button = new ButtonImpl();
-		return button;
 	}
 
 	/**

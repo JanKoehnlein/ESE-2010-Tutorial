@@ -301,31 +301,21 @@ ruleWidget returns [EObject current=null]
 
     |
     { 
-        currentNode=createCompositeNode(grammarAccess.getWidgetAccess().getButtonParserRuleCall_1(), currentNode); 
+        currentNode=createCompositeNode(grammarAccess.getWidgetAccess().getSpinnerParserRuleCall_1(), currentNode); 
     }
-    this_Button_1=ruleButton
+    this_Spinner_1=ruleSpinner
     { 
-        $current = $this_Button_1.current; 
+        $current = $this_Spinner_1.current; 
         currentNode = currentNode.getParent();
     }
 
     |
     { 
-        currentNode=createCompositeNode(grammarAccess.getWidgetAccess().getSpinnerParserRuleCall_2(), currentNode); 
+        currentNode=createCompositeNode(grammarAccess.getWidgetAccess().getLinkParserRuleCall_2(), currentNode); 
     }
-    this_Spinner_2=ruleSpinner
+    this_Link_2=ruleLink
     { 
-        $current = $this_Spinner_2.current; 
-        currentNode = currentNode.getParent();
-    }
-
-    |
-    { 
-        currentNode=createCompositeNode(grammarAccess.getWidgetAccess().getLinkParserRuleCall_3(), currentNode); 
-    }
-    this_Link_3=ruleLink
-    { 
-        $current = $this_Link_3.current; 
+        $current = $this_Link_2.current; 
         currentNode = currentNode.getParent();
     }
 )
@@ -363,57 +353,6 @@ ruleText returns [EObject current=null]
 		lv_name_1_0=ruleIdOrString		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getTextRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
-	        }
-	        try {
-	       		set(
-	       			$current, 
-	       			"name",
-	        		lv_name_1_0, 
-	        		"IdOrString", 
-	        		currentNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	        currentNode = currentNode.getParent();
-	    }
-
-)
-))
-;
-
-
-
-
-
-// Entry rule entryRuleButton
-entryRuleButton returns [EObject current=null] 
-	:
-	{ currentNode = createCompositeNode(grammarAccess.getButtonRule(), currentNode); }
-	 iv_ruleButton=ruleButton 
-	 { $current=$iv_ruleButton.current; } 
-	 EOF 
-;
-
-// Rule Button
-ruleButton returns [EObject current=null] 
-    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-    }
-    @after { resetLookahead(); 
-    	lastConsumedNode = currentNode;
-    }:
-(	'Button' 
-    {
-        createLeafNode(grammarAccess.getButtonAccess().getButtonKeyword_0(), null); 
-    }
-(
-(
-		{ 
-	        currentNode=createCompositeNode(grammarAccess.getButtonAccess().getNameIdOrStringParserRuleCall_1_0(), currentNode); 
-	    }
-		lv_name_1_0=ruleIdOrString		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getButtonRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
 	        }
 	        try {

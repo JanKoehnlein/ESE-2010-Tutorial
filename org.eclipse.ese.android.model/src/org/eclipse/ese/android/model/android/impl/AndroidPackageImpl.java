@@ -10,14 +10,11 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.ese.android.model.android.Activity;
 import org.eclipse.ese.android.model.android.AndroidFactory;
 import org.eclipse.ese.android.model.android.AndroidPackage;
 import org.eclipse.ese.android.model.android.Application;
-import org.eclipse.ese.android.model.android.Button;
 import org.eclipse.ese.android.model.android.Link;
 import org.eclipse.ese.android.model.android.Spinner;
 import org.eclipse.ese.android.model.android.Text;
@@ -57,13 +54,6 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 	 * @generated
 	 */
 	private EClass textEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass buttonEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -226,15 +216,6 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getButton() {
-		return buttonEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSpinner() {
 		return spinnerEClass;
 	}
@@ -298,8 +279,6 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 
 		textEClass = createEClass(TEXT);
 
-		buttonEClass = createEClass(BUTTON);
-
 		spinnerEClass = createEClass(SPINNER);
 
 		linkEClass = createEClass(LINK);
@@ -335,7 +314,6 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 
 		// Add supertypes to classes
 		textEClass.getESuperTypes().add(this.getWidget());
-		buttonEClass.getESuperTypes().add(this.getWidget());
 		spinnerEClass.getESuperTypes().add(this.getWidget());
 		linkEClass.getESuperTypes().add(this.getWidget());
 
@@ -352,8 +330,6 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 		initEAttribute(getWidget_Name(), ecorePackage.getEString(), "name", null, 1, 1, Widget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(spinnerEClass, Spinner.class, "Spinner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

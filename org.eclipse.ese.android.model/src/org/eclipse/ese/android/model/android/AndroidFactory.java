@@ -53,15 +53,6 @@ public interface AndroidFactory extends EFactory {
 	Text createText();
 
 	/**
-	 * Returns a new object of class '<em>Button</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Button</em>'.
-	 * @generated
-	 */
-	Button createButton();
-
-	/**
 	 * Returns a new object of class '<em>Spinner</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

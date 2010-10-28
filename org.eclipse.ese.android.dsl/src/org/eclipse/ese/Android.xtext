@@ -13,13 +13,10 @@ Activity:
 	'Activity' name=ID '{' widgets+=Widget* '}';
 
 Widget:
-	Text | Button | Spinner | Link;
+	Text | Spinner | Link;
 
 Text:
 	'Text' name=IdOrString;
-
-Button:
-	'Button' name=IdOrString;
 
 Spinner:
 	'Spinner' name=IdOrString;

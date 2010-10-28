@@ -36,9 +36,8 @@ protected class ThisRootNode extends RootToken {
 			case 2: return new Activity_Group(this, this, 2, inst);
 			case 3: return new Widget_Alternatives(this, this, 3, inst);
 			case 4: return new Text_Group(this, this, 4, inst);
-			case 5: return new Button_Group(this, this, 5, inst);
-			case 6: return new Spinner_Group(this, this, 6, inst);
-			case 7: return new Link_Group(this, this, 7, inst);
+			case 5: return new Spinner_Group(this, this, 5, inst);
+			case 6: return new Link_Group(this, this, 6, inst);
 			default: return null;
 		}	
 	}	
@@ -491,11 +490,11 @@ protected class Activity_RightCurlyBracketKeyword_4 extends KeywordToken  {
 /************ begin Rule Widget ****************
  *
  * Widget:
- * 	Text | Button | Spinner | Link;
+ * 	Text | Spinner | Link;
  *
  **/
 
-// Text | Button | Spinner | Link
+// Text | Spinner | Link
 protected class Widget_Alternatives extends AlternativesToken {
 
 	public Widget_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -511,17 +510,15 @@ protected class Widget_Alternatives extends AlternativesToken {
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
 			case 0: return new Widget_TextParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Widget_ButtonParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
-			case 2: return new Widget_SpinnerParserRuleCall_2(lastRuleCallOrigin, this, 2, inst);
-			case 3: return new Widget_LinkParserRuleCall_3(lastRuleCallOrigin, this, 3, inst);
+			case 1: return new Widget_SpinnerParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
+			case 2: return new Widget_LinkParserRuleCall_2(lastRuleCallOrigin, this, 2, inst);
 			default: return null;
 		}	
 	}
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getButtonRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getLinkRule().getType().getClassifier() && 
+		if(getEObject().eClass() != grammarAccess.getLinkRule().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getSpinnerRule().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getTextRule().getType().getClassifier())
 			return null;
@@ -566,52 +563,16 @@ protected class Widget_TextParserRuleCall_0 extends RuleCallToken {
 	}	
 }
 
-// Button
-protected class Widget_ButtonParserRuleCall_1 extends RuleCallToken {
-	
-	public Widget_ButtonParserRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public RuleCall getGrammarElement() {
-		return grammarAccess.getWidgetAccess().getButtonParserRuleCall_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Button_Group(this, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getButtonRule().getType().getClassifier())
-			return null;
-		if(checkForRecursion(Button_Group.class, eObjectConsumer)) return null;
-		return eObjectConsumer;
-	}
-	
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index, inst);
-		}	
-	}	
-}
-
 // Spinner
-protected class Widget_SpinnerParserRuleCall_2 extends RuleCallToken {
+protected class Widget_SpinnerParserRuleCall_1 extends RuleCallToken {
 	
-	public Widget_SpinnerParserRuleCall_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Widget_SpinnerParserRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getWidgetAccess().getSpinnerParserRuleCall_2();
+		return grammarAccess.getWidgetAccess().getSpinnerParserRuleCall_1();
 	}
 
     @Override
@@ -639,15 +600,15 @@ protected class Widget_SpinnerParserRuleCall_2 extends RuleCallToken {
 }
 
 // Link
-protected class Widget_LinkParserRuleCall_3 extends RuleCallToken {
+protected class Widget_LinkParserRuleCall_2 extends RuleCallToken {
 	
-	public Widget_LinkParserRuleCall_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Widget_LinkParserRuleCall_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getWidgetAccess().getLinkParserRuleCall_3();
+		return grammarAccess.getWidgetAccess().getLinkParserRuleCall_2();
 	}
 
     @Override
@@ -771,101 +732,6 @@ protected class Text_NameAssignment_1 extends AssignmentToken  {
 
 
 /************ end Rule Text ****************/
-
-
-/************ begin Rule Button ****************
- *
- * Button:
- * 	"Button" name=IdOrString;
- *
- **/
-
-// "Button" name=IdOrString
-protected class Button_Group extends GroupToken {
-	
-	public Button_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getButtonAccess().getGroup();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Button_NameAssignment_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getButtonRule().getType().getClassifier())
-			return null;
-		return eObjectConsumer;
-	}
-
-}
-
-// "Button"
-protected class Button_ButtonKeyword_0 extends KeywordToken  {
-	
-	public Button_ButtonKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getButtonAccess().getButtonKeyword_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
-		}	
-	}
-
-}
-
-// name=IdOrString
-protected class Button_NameAssignment_1 extends AssignmentToken  {
-	
-	public Button_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getButtonAccess().getNameAssignment_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Button_ButtonKeyword_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getButtonAccess().getNameIdOrStringParserRuleCall_1_0(), value, null)) {
-			type = AssignmentType.DATATYPE_RULE_CALL;
-			element = grammarAccess.getButtonAccess().getNameIdOrStringParserRuleCall_1_0();
-			return obj;
-		}
-		return null;
-	}
-
-}
-
-
-/************ end Rule Button ****************/
 
 
 /************ begin Rule Spinner ****************
